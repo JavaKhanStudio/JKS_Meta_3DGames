@@ -96,6 +96,12 @@ public interface MV_Animated extends AnimEventListener, basicImpl
 		{getControl().animationFinish = true ;}
 	}
 	
+	@Override
+	public default void onAnimChange(AnimControl arg0, AnimChannel arg1, String arg2)
+	{
+	
+	}
+	
 	
 		
 }	
