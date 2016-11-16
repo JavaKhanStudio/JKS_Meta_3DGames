@@ -25,6 +25,7 @@ public class AnimationControl
 	public AnimationControl(ModelVisuel model, MV_Animated anim)
 	{
 		Spatial controlOn ; 
+		linkedToo = model ;
 		
 		if(getAsset().bodyPath != null && !getAsset().bodyPath.isEmpty())
 			controlOn = Utils_3DObject.getNode(model, getAsset().bodyPath);
