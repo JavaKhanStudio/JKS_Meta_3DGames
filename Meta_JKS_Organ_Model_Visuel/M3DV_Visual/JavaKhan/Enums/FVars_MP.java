@@ -10,6 +10,7 @@ public class FVars_MP
 	final static String SMP_Glass = MP + "Glass/" ;
 	
 	
+	
 	// ANIMATED MATERIAL PATH 
 	private final static String AMP = "JavaKhan/MatBank/"; 
 	

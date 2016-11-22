@@ -12,6 +12,7 @@ public enum Enum_Material_Static implements Material_Path
 	CSAlly(FVars_MP.SMP_Combat + "CSAlly.j3m"), 
 	CSEnnemy(FVars_MP.SMP_Combat + "CSEnnemy.j3m"), 
 	
+	
 	;
 	
 	

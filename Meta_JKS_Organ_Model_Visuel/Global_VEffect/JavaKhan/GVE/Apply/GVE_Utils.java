@@ -9,6 +9,7 @@ import com.jme3.post.Filter;
 import com.jme3.post.FilterPostProcessor;
 import com.jme3.post.filters.BloomFilter;
 import com.jme3.post.filters.TranslucentBucketFilter;
+import com.jme3.renderer.ViewPort;
 import com.jme3.scene.Node;
 
 import JKS_Head.GVars.GVars_Soul_Model;
@@ -31,6 +32,8 @@ public class GVE_Utils
 	private static HashMap<String,Filter> GE_Filter_list = new HashMap<String,Filter>() ; 
 	private static HashMap<String,Light> GE_Light_list = new HashMap<String,Light>() ; 
 	
+	private static ViewPort outlineViewport ; 
+	
 	
 	public static void initFilters(SimpleApplication applyInto)
 	{
@@ -46,6 +49,7 @@ public class GVE_Utils
 			resetFilter() ; 
 		}
 		
+		outlineViewport = GVars_Soul_Model.app.getRenderManager().createPreView("outlineViewport", GVars_Soul_Model.getApp().getCamera());
 		
 	}
 	

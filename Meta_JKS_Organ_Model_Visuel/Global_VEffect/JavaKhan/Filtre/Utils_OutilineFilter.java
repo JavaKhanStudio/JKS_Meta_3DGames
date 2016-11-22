@@ -11,7 +11,7 @@ import JKS_Head.GVars.GVars_Soul_Model;
 import JavaKhan.Filter.Outline.OutlineFilter;
 import JavaKhan.Filter.Outline.OutlinePreFilter;
 
-public class Utils_Filter
+public class Utils_OutilineFilter
 {
 
 	private static FilterPostProcessor solidFPP ;
