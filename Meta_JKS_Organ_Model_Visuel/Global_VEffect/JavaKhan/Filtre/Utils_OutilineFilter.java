@@ -28,11 +28,12 @@ public class Utils_OutilineFilter
 		});
 		
 		
-		outlineViewport = GVars_Soul_Model.app.getRenderManager().createPreView("outlineViewport", GVars_Soul_Model.getApp().getCamera());
 		FilterPostProcessor outlinefpp = new FilterPostProcessor(GVars_Soul_Model.app.getAssetManager());
+		outlineViewport = GVars_Soul_Model.app.getRenderManager().createPreView("outlineViewport", GVars_Soul_Model.getApp().getCamera());
 		outlinePreFilter = new OutlinePreFilter();
 		outlinefpp.addFilter(outlinePreFilter);
 		outlineViewport.addProcessor(outlinefpp);
+		
 	}
 	
 	

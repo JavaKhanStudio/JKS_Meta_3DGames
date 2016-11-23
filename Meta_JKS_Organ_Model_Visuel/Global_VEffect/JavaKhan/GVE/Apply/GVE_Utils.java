@@ -5,14 +5,17 @@ import java.util.concurrent.Callable;
 
 import com.jme3.app.SimpleApplication;
 import com.jme3.light.Light;
+import com.jme3.math.ColorRGBA;
 import com.jme3.post.Filter;
 import com.jme3.post.FilterPostProcessor;
 import com.jme3.post.filters.BloomFilter;
 import com.jme3.post.filters.TranslucentBucketFilter;
 import com.jme3.renderer.ViewPort;
 import com.jme3.scene.Node;
+import com.jme3.scene.Spatial;
 
 import JKS_Head.GVars.GVars_Soul_Model;
+import JavaKhan.Filter.Outline.OutlineFilter;
 import JavaKhan.GVE.Apply.Filter.GVE_Utils_Filter_Fog;
 import JavaKhan.GVE.Apply.Filter.GVE_Utils_Filter_Water;
 import JavaKhan.GVE.Apply.Light.GVE_Utils_Light_Ambiant;
@@ -32,7 +35,6 @@ public class GVE_Utils
 	private static HashMap<String,Filter> GE_Filter_list = new HashMap<String,Filter>() ; 
 	private static HashMap<String,Light> GE_Light_list = new HashMap<String,Light>() ; 
 	
-	private static ViewPort outlineViewport ; 
 	
 	
 	public static void initFilters(SimpleApplication applyInto)
@@ -48,8 +50,6 @@ public class GVE_Utils
 			
 			resetFilter() ; 
 		}
-		
-		outlineViewport = GVars_Soul_Model.app.getRenderManager().createPreView("outlineViewport", GVars_Soul_Model.getApp().getCamera());
 		
 	}
 	
@@ -175,7 +175,6 @@ public class GVE_Utils
 
 	public static FilterPostProcessor getVolatileFilter() 
 	{return volatileFPP;}
-	
 	
 	
 }

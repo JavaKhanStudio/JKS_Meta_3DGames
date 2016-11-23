@@ -23,17 +23,15 @@ public class TA_MovingCircle_BAP extends AbstractControl
 		model = Model ; 
 		model.addControl(this);
 		buffer = phase;
-		control = new RigidBodyControl(1) ;
+		control = new RigidBodyControl(0) ;
 		control.setEnabled(true);
 		
 		Model.addControl(control);
 		space.getPhysicsSpace().add(Model);
-		//control.setKinematic(true);
-		control.setGravity(new Vector3f(0,0,0));
-		control.setMass(400);
-		//control.setKinematic(true);
-		//Model.getControl(RigidBodyControl.class).setLinearVelocity(new Vector3f(0,1,0));
-		//control = Model.getControl(RigidBodyControl.class) ;
+		control.setKinematic(true);
+		
+		System.out.println("MOving them circles");
+		control = Model.getControl(RigidBodyControl.class) ;
 	}
 	
 	@Override
@@ -47,8 +45,8 @@ public class TA_MovingCircle_BAP extends AbstractControl
 	protected void controlUpdate(float fps) 
 	{
 		buffer += (Math.PI/120); //Math.abs(speed*fps*30) ;
-		//model.move(new Vector3f(rayon*(float)Math.cos(buffer),rayon*(float)Math.sin(buffer),0)) ;
-		control.setLinearVelocity(new Vector3f(rayon*(float)Math.cos(buffer),rayon*(float)Math.sin(buffer),0)) ;
+		model.move(new Vector3f(rayon*(float)Math.cos(buffer),rayon*(float)Math.sin(buffer),0)) ;
+		//control.setLinearVelocity(new Vector3f(rayon*(float)Math.cos(buffer),rayon*(float)Math.sin(buffer),0)) ;
 		//control.setPhysicsLocation(control.getPhysicsLocation().add(new Vector3f(rayon*(float)Math.cos(buffer),rayon*(float)Math.sin(buffer),0)));
 		//control.setGravity(new Vector3f(0,40,0)) ;
 		//control.activate();
