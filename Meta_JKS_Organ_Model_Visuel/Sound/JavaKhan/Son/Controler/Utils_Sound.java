@@ -187,4 +187,24 @@ public class Utils_Sound
 		}
 	    
 	}
+	
+	public static void breakASound(final String path,final float volume,float speed)
+	{
+		
+		
+					AudioNode sound ;
+					sound = new AudioNode(GVars_Soul_Model.app.getAssetManager(), path, false) ; 
+					sound.setName("Audio Bruitage");
+					sound.setPositional(false);
+				    sound.setLooping(false);
+				    sound.setPitch(speed);
+				    sound.setVolume(volume);
+				    GVars_Soul_Model.app.getRootNode().attachChild(sound) ;
+				    
+					sound.play();
+		
+	    
+	}
+	
+	
 }

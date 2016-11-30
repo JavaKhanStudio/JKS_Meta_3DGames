@@ -29,6 +29,7 @@ public class TPA_MovingBAF extends AbstractControl
 	
 	public TPA_MovingBAF(float Vitesse, float Distance, float vectX, float vectY, float vectZ, boolean startPositif, Spatial Model, BulletAppState space)
 	{
+		model=Model ;
 		control = new RigidBodyControl(0) ;
 		Model.addControl(control);
 		space.getPhysicsSpace().add(Model);
@@ -42,8 +43,7 @@ public class TPA_MovingBAF extends AbstractControl
 		speedX = vectX ; 
 		speedY = vectY ; 
 		speedZ = vectZ ; 
-		
-		System.out.println("Champagne");
+		Model.addControl(this);
 	}
 	
 	@Override
