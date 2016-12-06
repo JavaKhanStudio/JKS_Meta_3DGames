@@ -37,6 +37,7 @@ public class AnimationControl
 		if(control != null)
 		{
 			channel = control.createChannel();
+			System.out.println("Channel created as " + channel);
 			control.addListener(anim);
 		}
 		else

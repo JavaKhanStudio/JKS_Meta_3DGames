@@ -17,8 +17,8 @@ public class Utils_Threaded_Loading extends Thread
 	
 	public void run()
 	{
-		if(GVars_Soul_Model.showLogs)
-			System.out.println("[Client] " + path);
+//		if(GVars_Soul_Model.showLogs)
+//			System.out.println("[Client] " + path);
 		
 		try
 		{GVars_Soul_Model.app.getAssetManager().loadAsset(path) ;}

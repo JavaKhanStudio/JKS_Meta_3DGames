@@ -137,7 +137,7 @@ public abstract class ModelVisuel extends Node implements basicImpl
 	
 	public void setOutOfBattle()
 	{
-		System.out.println("[Client] pas de cleanFromCombat dans cette classe") ; 
+		Utils_Logger.logError("Client", "pas de cleanFromCombat dans cette classe");
 	}
 	
 	
