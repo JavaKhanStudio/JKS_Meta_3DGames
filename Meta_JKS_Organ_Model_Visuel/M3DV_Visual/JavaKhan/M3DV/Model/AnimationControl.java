@@ -30,7 +30,7 @@ public class AnimationControl
 		if(getAsset().bodyPath != null && !getAsset().bodyPath.isEmpty())
 			controlOn = Utils_3DObject.getNode(model, getAsset().bodyPath);
 		else
-			controlOn = model ;
+			controlOn = model.main ;
 		
 		control = controlOn.getControl(AnimControl.class);
 		
