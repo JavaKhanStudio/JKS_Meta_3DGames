@@ -4,6 +4,7 @@ import java.util.HashMap;
 import java.util.concurrent.Callable;
 
 import com.jme3.app.SimpleApplication;
+import com.jme3.light.DirectionalLight;
 import com.jme3.light.Light;
 import com.jme3.math.ColorRGBA;
 import com.jme3.post.Filter;
@@ -13,6 +14,9 @@ import com.jme3.post.filters.TranslucentBucketFilter;
 import com.jme3.renderer.ViewPort;
 import com.jme3.scene.Node;
 import com.jme3.scene.Spatial;
+import com.jme3.shadow.DirectionalLightShadowFilter;
+import com.jme3.shadow.DirectionalLightShadowRenderer;
+import com.jme3.shadow.EdgeFilteringMode;
 
 import JKS_Head.GVars.GVars_Soul_Model;
 import JavaKhan.Filter.Outline.OutlineFilter;
@@ -35,7 +39,7 @@ public class GVE_Utils
 	private static HashMap<String,Filter> GE_Filter_list = new HashMap<String,Filter>() ; 
 	private static HashMap<String,Light> GE_Light_list = new HashMap<String,Light>() ; 
 	
-	
+	public static final int SHADOWMAP_SIZE = 1024;
 	
 	public static void initFilters(SimpleApplication applyInto)
 	{
@@ -162,6 +166,30 @@ public class GVE_Utils
 				return null ; 
 			}
 		});
+	}
+	
+	
+	public static void addShadow(DirectionalLight light)
+	{
+		DirectionalLightShadowRenderer dlsr = new DirectionalLightShadowRenderer(GVars_Soul_Model.app.getAssetManager(), SHADOWMAP_SIZE, 3);
+		dlsr.setLight(light);
+		dlsr.setLambda(0.55f);
+        dlsr.setShadowIntensity(0.8f);
+        dlsr.setEdgeFilteringMode(EdgeFilteringMode.Nearest);
+        dlsr.displayDebug();
+        GVars_Soul_Model.app.getViewPort().addProcessor(dlsr);
+
+        DirectionalLightShadowFilter dlsf = new DirectionalLightShadowFilter(GVars_Soul_Model.app.getAssetManager(), SHADOWMAP_SIZE, 3);
+        dlsr.setLight(light);
+        dlsf.setLambda(0.55f);
+        dlsf.setShadowIntensity(0.8f);
+        dlsf.setEdgeFilteringMode(EdgeFilteringMode.Nearest);
+        dlsf.setEnabled(false);
+
+        FilterPostProcessor fpp = new FilterPostProcessor(GVars_Soul_Model.app.getAssetManager());
+        fpp.addFilter(dlsf);
+
+        GVars_Soul_Model.app.getViewPort().addProcessor(fpp);
 	}
 	
 	

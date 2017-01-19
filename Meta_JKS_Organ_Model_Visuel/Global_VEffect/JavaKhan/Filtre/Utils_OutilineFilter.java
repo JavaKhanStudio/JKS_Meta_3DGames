@@ -17,6 +17,8 @@ public class Utils_OutilineFilter
 	private static FilterPostProcessor solidFPP ;
 	private static OutlinePreFilter outlinePreFilter;
 	private static ViewPort outlineViewport ; 
+   
+	
 	
 	static public void initFilter()
 	{
@@ -90,6 +92,8 @@ public class Utils_OutilineFilter
 		
 		
 	}
+	
+
 	
 	public static FilterPostProcessor getSolidFilter()
 	{

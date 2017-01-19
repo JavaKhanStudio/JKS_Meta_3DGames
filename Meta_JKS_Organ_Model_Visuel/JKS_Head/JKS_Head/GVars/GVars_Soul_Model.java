@@ -5,6 +5,7 @@ import com.jme3.input.controls.ActionListener;
 import com.jme3.renderer.Camera;
 import com.jme3.scene.Node;
 
+import Camera.Enum_CamType;
 import tonegod.gui.core.Screen;
 
 public class GVars_Soul_Model 
@@ -12,7 +13,7 @@ public class GVars_Soul_Model
 
 	public static SimpleApplication app ;
 	public static Screen screen ;
-	
+	public static Enum_CamType currentCam ;
 	
 	public static ActionListener actionLisen ;
 	public static boolean showLogs = true ;
