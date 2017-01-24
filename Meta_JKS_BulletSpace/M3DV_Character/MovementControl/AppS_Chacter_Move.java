@@ -3,6 +3,7 @@ package MovementControl;
 import com.jme3.app.state.AbstractAppState;
 import com.jme3.math.Vector3f;
 
+import Camera.Settings_Camera;
 import Clavier.Control_Clavier;
 import CollisionEvent.PlayerCharacterControl;
 import Data.Charac_Main;
@@ -30,11 +31,11 @@ public class AppS_Chacter_Move extends AbstractAppState
 	 {
 		  player.input.beenMoving = false ; 
 		  
-		  if(Control_Clavier.normalState)
+		  if(Settings_Camera.normalState)
 			  normalMove();
-		  else if(Control_Clavier.fromTopState)
+		  else if(Settings_Camera.fromTopState)
 			  fromTopMove();
-		  else if(Control_Clavier.fromSideState)
+		  else if(Settings_Camera.fromSideState)
 			  fromSideMove() ;
 
 		   	if(Charac_Main.physicsCharacter.isOnGround() && Charac_Main.visualCharacter.animationFinish)
@@ -200,14 +201,14 @@ public class AppS_Chacter_Move extends AbstractAppState
 	 public void initTheDirection()
 	 {
 		 //Normale 
-		 if(Control_Clavier.normalState)
+		 if(Settings_Camera.normalState)
 		 {
 			 vector_Front = GVars_Soul_Model.getCam().getDirection(); //augmenter signifie rotation plus lente mais avance plus rapide
 			 vector_Side = GVars_Soul_Model.getCam().getLeft();
 		 }
 		 
 	    // From TOP
-		 if(Control_Clavier.fromTopState)
+		 if(Settings_Camera.fromTopState)
 		 {
 			 vector_Front = GVars_Soul_Model.getCam().getLeft() ;
 			 vector_Side = GVars_Soul_Model.getCam().getUp() ;

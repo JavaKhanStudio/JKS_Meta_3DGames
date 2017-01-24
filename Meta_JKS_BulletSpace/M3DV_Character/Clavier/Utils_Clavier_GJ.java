@@ -2,10 +2,10 @@ package Clavier;
 
 import com.jme3.input.InputManager;
 import com.jme3.input.KeyInput;
-import com.jme3.input.controls.ActionListener;
 import com.jme3.input.controls.KeyTrigger;
 
-import Config_Global.GVars_GJ;
+import JKS_Head.GVars.GVars_Soul_Model;
+
 
 
 public class Utils_Clavier_GJ
@@ -75,7 +75,7 @@ public class Utils_Clavier_GJ
 	public static void addTestKey() 
 	{
 		getInputManager().addMapping("Test1",new KeyTrigger(KeyInput.KEY_1));
-		getInputManager().addListener(GVars_GJ.actionLisen, "Test1");
+		getInputManager().addListener(GVars_Soul_Model.actionLisen, "Test1");
 	}
 	
   	private static void setupDefaultDirectionalKeys() 
@@ -96,19 +96,19 @@ public class Utils_Clavier_GJ
 		if (first){
 			getInputManager().addMapping("Strafe Left", new KeyTrigger(left));
 			getInputManager().addMapping("Strafe Right",new KeyTrigger(right));
-			getInputManager().addListener(GVars_GJ.actionLisen, "Strafe Left", "Strafe Right");
+			getInputManager().addListener(GVars_Soul_Model.actionLisen, "Strafe Left", "Strafe Right");
 		}else{
 			getInputManager().addMapping("Rotate Left",new KeyTrigger(left));
 			getInputManager().addMapping("Rotate Right",new KeyTrigger(right));
-			getInputManager().addListener(GVars_GJ.actionLisen, "Rotate Left", "Rotate Right");
+			getInputManager().addListener(GVars_Soul_Model.actionLisen, "Rotate Left", "Rotate Right");
 		}
 		
-		getInputManager().addListener(GVars_GJ.actionLisen, "Walk Forward", "Walk Backward");
-		getInputManager().addListener(GVars_GJ.actionLisen, "Jump");
+		getInputManager().addListener(GVars_Soul_Model.actionLisen, "Walk Forward", "Walk Backward");
+		getInputManager().addListener(GVars_Soul_Model.actionLisen, "Jump");
 	  }
   
     private static InputManager getInputManager() 
-    {return GVars_GJ.app.getInputManager() ; }
+    {return GVars_Soul_Model.app.getInputManager() ; }
 	
 	
 }

@@ -13,12 +13,14 @@ public class Init_Camera
 	
 	static CameraNode camNode;
 	static Node charac  ;
+	static Node stage ; 
 	
-	public static void BuildCamera(Node Charac)
+	public static void BuildCamera(Node Charac, Node Stage)
 	{
 		camNode = new CameraNode("CamNode", GVars_Soul_Model.app.getCamera());
 	    camNode.setControlDir(ControlDirection.SpatialToCamera);
 	    charac = Charac ;
+	    stage = Stage; 
 	    charac.attachChild(camNode);
 	}
 	
@@ -50,10 +52,9 @@ public class Init_Camera
 		camNode.setLocalTranslation(new Vector3f(0, 15, 0));
 	}
 
-	public static void initCameraThirdPersonFromSide(Node stage, String num) 
+	public static void initCameraThirdPersonFromSide(String num) 
 	{
 		controlCam(Enum_CamType.THIRD_PERSON_SIDE) ;
-		//spa.detachChild(camNode);
 		
 	    camNode.getCamera().setLocation(((Node) stage.getChild("Cameras")).getChild("Camera2D_out_" + num).getWorldTranslation());
 	    camNode.getCamera().lookAt(((Node) stage.getChild("Cameras")).getChild("Camera2D_in_" + num).getWorldTranslation(), Vector3f.UNIT_Y);
