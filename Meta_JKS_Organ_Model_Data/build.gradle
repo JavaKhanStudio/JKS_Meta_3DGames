@@ -1,0 +1,16 @@
+apply plugin: 'idea'
+apply plugin: 'java'
+
+sourceSets {
+    main {
+        java {
+            srcDir 'Map_Data_Visual'
+            srcDir 'Meta_Models'
+            srcDir 'Outils'
+        }
+    }
+    test {
+    }
+}
+
+

@@ -1,0 +1,28 @@
+apply plugin: 'idea'
+apply plugin: 'java'
+
+sourceSets {
+    main {
+        java {
+            srcDir 'Camera'
+            srcDir 'Global_VEffect'
+            srcDir 'JKS_Head'
+            srcDir 'Keys'
+            srcDir 'M3DV_Visual'
+            srcDir 'Single_VEffect'
+            srcDir 'Sound'
+            srcDir 'Threaded_Action'
+            srcDir 'VEffect'
+            srcDir 'Sky'
+        }
+    }
+    test {
+    }
+}
+
+dependencies 
+{
+	compile project(':Meta_JKS_Organ_Model_Data')
+    compile project(':Meta_JKS_GUI_TgGui')
+    compile project(':Meta_JKS_Tools_FromJME')
+}

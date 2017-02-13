@@ -1,0 +1,15 @@
+apply plugin: 'idea'
+apply plugin: 'java'
+
+sourceSets {
+    main {
+        java {
+            srcDir 'Asset'
+            srcDir 'Body'
+            srcDir 'Mind'
+            srcDir 'nbproject'
+        }
+    }
+    test {
+    }
+}
