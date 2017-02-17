@@ -8,15 +8,15 @@ import JavaKhan.Map.GE.GE_Model;
 public class GE_LakeWater extends GE_Filter
 {
 	
-	int hauteur ;
+	float hauteur ;
 	public final static String name = "LakeWater" ;
 	
-	public GE_LakeWater(int Hauteur)
+	public GE_LakeWater(float Hauteur)
 	{
 		hauteur = Hauteur ;
 	}
 	
-	public int getHeight()
+	public float getHeight()
 	{return hauteur  ;}
 	
 	@Override

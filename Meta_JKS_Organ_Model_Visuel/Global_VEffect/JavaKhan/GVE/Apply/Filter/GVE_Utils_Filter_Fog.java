@@ -5,7 +5,7 @@ import com.jme3.math.ColorRGBA;
 import com.jme3.post.Filter;
 import com.jme3.post.filters.FogFilter;
 
-import JavaKhan.GVE.Apply.GVE_Utils;
+import JavaKhan.GVE.Apply.Utils_GVE;
 import JavaKhan.Map.GE.Filter.GE_Fog;
 
 public class GVE_Utils_Filter_Fog 
@@ -19,7 +19,7 @@ public class GVE_Utils_Filter_Fog
         fog.setFogDistance(applyIm.distance);
         fog.setFogDensity(applyIm.density);
        
-        GVE_Utils.safe_Volatile_Filter_Add(fog);
+        Utils_GVE.safe_Volatile_Filter_Add(fog);
         return fog ; 
 	}
 	

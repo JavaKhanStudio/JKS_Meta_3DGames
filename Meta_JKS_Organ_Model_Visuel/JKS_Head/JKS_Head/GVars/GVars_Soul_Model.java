@@ -1,6 +1,7 @@
 package JKS_Head.GVars;
 
 import com.jme3.app.SimpleApplication;
+import com.jme3.asset.AssetManager;
 import com.jme3.input.controls.ActionListener;
 import com.jme3.renderer.Camera;
 import com.jme3.scene.Node;
@@ -24,6 +25,10 @@ public class GVars_Soul_Model
 		screen = new Screen(app) ; 
 		app.getGuiNode().addControl(screen);
 	}
+	
+	
+	public static AssetManager getAssetManager()
+	{return app.getAssetManager();}
 
 
 	public static SimpleApplication getApp()

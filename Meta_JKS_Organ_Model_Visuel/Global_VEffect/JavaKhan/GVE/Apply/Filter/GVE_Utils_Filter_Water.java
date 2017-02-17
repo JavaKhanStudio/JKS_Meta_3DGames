@@ -6,7 +6,7 @@ import com.jme3.post.Filter;
 import com.jme3.post.filters.TranslucentBucketFilter;
 import com.jme3.water.WaterFilter;
 
-import JavaKhan.GVE.Apply.GVE_Utils;
+import JavaKhan.GVE.Apply.Utils_GVE;
 import JavaKhan.Map.GE.Filter.GE_LakeWater;
 
 public class GVE_Utils_Filter_Water 
@@ -24,12 +24,12 @@ public class GVE_Utils_Filter_Water
 		water.setWaveScale(0.01f);
 		water.setSpeed(0.8f);
 		
-		GVE_Utils.safe_Volatile_Filter_Add(water);
+		Utils_GVE.safe_Volatile_Filter_Add(water);
 		
 		
 		TranslucentBucketFilter  filter = new TranslucentBucketFilter() ;
 		
-		GVE_Utils.safe_Volatile_Filter_Add(filter);
+		Utils_GVE.safe_Volatile_Filter_Add(filter);
 		
 		return water ; 
 	}
