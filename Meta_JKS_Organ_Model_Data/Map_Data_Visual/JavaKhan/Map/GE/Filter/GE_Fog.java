@@ -2,6 +2,7 @@ package JavaKhan.Map.GE.Filter;
 
 import javax.persistence.Embeddable;
 
+import JavaKhan.Map.GE.GE_Filter;
 import JavaKhan.Map.GE.GE_Model;
 
 @Embeddable

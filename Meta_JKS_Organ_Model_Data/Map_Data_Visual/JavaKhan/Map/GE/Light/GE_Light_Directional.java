@@ -2,6 +2,7 @@ package JavaKhan.Map.GE.Light;
 
 import javax.persistence.Embeddable;
 
+import JavaKhan.Map.GE.GE_Light;
 import JavaKhan.Map.GE.GE_Model;
 
 @Embeddable

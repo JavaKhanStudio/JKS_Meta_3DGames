@@ -24,6 +24,8 @@ import JavaKhan.GVE.Apply.Filter.GVE_Utils_Filter_Fog;
 import JavaKhan.GVE.Apply.Filter.GVE_Utils_Filter_Water;
 import JavaKhan.GVE.Apply.Light.GVE_Utils_Light_Ambiant;
 import JavaKhan.GVE.Apply.Light.GVE_Utils_Light_Directional;
+import JavaKhan.Map.GE.GE_Filter;
+import JavaKhan.Map.GE.GE_Light;
 import JavaKhan.Map.GE.GE_Model;
 import JavaKhan.Map.GE.Filter.GE_Fog;
 import JavaKhan.Map.GE.Filter.GE_LakeWater;
@@ -40,9 +42,12 @@ public class Utils_GVE
 	private static HashMap<String,Light> GE_Light_list = new HashMap<String,Light>() ; 
 	
 	public static final int SHADOWMAP_SIZE = 1024;
+	public static SimpleApplication applyInto ; 
 	
-	public static void initFilters(SimpleApplication applyInto)
+	public static void initFilters(SimpleApplication ApplyInto)
 	{
+		applyInto = ApplyInto ;
+		
 		if(volatileFPP == null)
 		{
 			volatileFPP = new FilterPostProcessor(applyInto.getAssetManager());
@@ -54,10 +59,9 @@ public class Utils_GVE
 			
 			resetFilter() ; 
 		}
-		
 	}
 	
-	public static void ApplyFilter(SimpleApplication applyInto, GE_Model applyIm)
+	public static void ApplyFilter(GE_Filter applyIm)
 	{
 		if(volatileFPP == null)
 		{
@@ -125,7 +129,7 @@ public class Utils_GVE
 	}
 	
 	
-	public static void ApplyLight(Node applyInto, GE_Model applyIm)
+	public static void ApplyLight(Node applyInto, GE_Light applyIm)
 	{
 		
 		System.out.println(applyIm.getName());
@@ -169,30 +173,34 @@ public class Utils_GVE
 	}
 	
 	
-	public static void addShadow(DirectionalLight light)
+	public static DirectionalLightShadowFilter addShadow(DirectionalLight light)
 	{
-		DirectionalLightShadowRenderer dlsr = new DirectionalLightShadowRenderer(GVars_Soul_Model.app.getAssetManager(), SHADOWMAP_SIZE, 3);
-		dlsr.setLight(light);
-		dlsr.setLambda(0.55f);
-        dlsr.setShadowIntensity(0.8f);
-        dlsr.setEdgeFilteringMode(EdgeFilteringMode.Nearest);
-        dlsr.displayDebug();
-        GVars_Soul_Model.app.getViewPort().addProcessor(dlsr);
+//		DirectionalLightShadowRenderer dlsr = new DirectionalLightShadowRenderer(GVars_Soul_Model.app.getAssetManager(), SHADOWMAP_SIZE, 4);
+//		dlsr.setLight(light);
+//		dlsr.setLambda(0.55f);
+//        dlsr.setShadowIntensity(0.8f);
+//        dlsr.setEdgeFilteringMode(EdgeFilteringMode.Nearest);
+//        dlsr.displayDebug();
+//        GVars_Soul_Model.app.getViewPort().addProcessor(dlsr);
 
-        DirectionalLightShadowFilter dlsf = new DirectionalLightShadowFilter(GVars_Soul_Model.app.getAssetManager(), SHADOWMAP_SIZE, 3);
-        dlsr.setLight(light);
+        DirectionalLightShadowFilter dlsf = new DirectionalLightShadowFilter(GVars_Soul_Model.app.getAssetManager(), SHADOWMAP_SIZE, 1);
+        dlsf.setLight(light);
         dlsf.setLambda(0.55f);
-        dlsf.setShadowIntensity(0.8f);
+        dlsf.setShadowIntensity(1.0f);
         dlsf.setEdgeFilteringMode(EdgeFilteringMode.Nearest);
-        dlsf.setEnabled(false);
+        dlsf.setEnabled(true);
 
-        FilterPostProcessor fpp = new FilterPostProcessor(GVars_Soul_Model.app.getAssetManager());
-        fpp.addFilter(dlsf);
+        volatileFPP.addFilter(dlsf);
 
-        GVars_Soul_Model.app.getViewPort().addProcessor(fpp);
+        //GVars_Soul_Model.app.getViewPort().addProcessor(volatileFPP);
+        
+        return dlsf ;
 	}
 	
-	
+	private SimpleApplication getApp()
+	{
+		return GVars_Soul_Model.app ; 
+	}
 	
 	public static void cleanAll(SimpleApplication app)
 	{

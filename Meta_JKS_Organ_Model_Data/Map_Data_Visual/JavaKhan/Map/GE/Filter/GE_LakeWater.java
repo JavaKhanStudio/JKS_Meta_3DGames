@@ -2,7 +2,7 @@ package JavaKhan.Map.GE.Filter;
 
 import javax.persistence.Embeddable;
 
-import JavaKhan.Map.GE.GE_Model;
+import JavaKhan.Map.GE.GE_Filter;
 
 @Embeddable
 public class GE_LakeWater extends GE_Filter
