@@ -1,9 +1,9 @@
 #org.springsource.ide.eclipse.gradle.core.preferences.GradleImportPreferences
-#Wed Feb 08 11:32:39 CET 2017
+#Tue Mar 14 20:47:15 CET 2017
 addResourceFilters=true
 afterTasks=afterEclipseImport;
 beforeTasks=cleanEclipse;eclipse;
 enableAfterTasks=true
 enableBeforeTasks=true
 enableDependendencyManagement=true
-projects=;
+projects=;Meta_JKS_BulletSpace;Meta_JKS_GUI_TgGui;Meta_JKS_Organ_Model_Data;Meta_JKS_Organ_Model_Visuel;Meta_JKS_Tools_FromJME;

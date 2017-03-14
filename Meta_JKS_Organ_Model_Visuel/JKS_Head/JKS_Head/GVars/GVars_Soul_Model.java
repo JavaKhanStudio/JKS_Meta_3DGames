@@ -7,6 +7,7 @@ import com.jme3.renderer.Camera;
 import com.jme3.scene.Node;
 
 import Camera.Enum_CamType;
+import JavaKhan.TgGui.InfoBox.IB_AInfoBox_Model;
 import tonegod.gui.core.Screen;
 
 public class GVars_Soul_Model 
@@ -15,6 +16,7 @@ public class GVars_Soul_Model
 	public static SimpleApplication app ;
 	public static Screen screen ;
 	public static Enum_CamType currentCam ;
+	public static IB_AInfoBox_Model infoBox ; 
 	
 	public static ActionListener actionLisen ;
 	public static boolean showLogs = true ;

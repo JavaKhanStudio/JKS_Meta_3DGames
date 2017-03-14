@@ -31,6 +31,13 @@ public class Label extends Element {
 		);
 	}
 	
+	public Label(ElementManager screen) {
+		this(screen, UIDUtil.getUID(), Vector2f.ZERO, Vector2f.ZERO,
+			screen.getStyle("Label").getVector4f("resizeBorders"),
+			screen.getStyle("Label").getString("defaultImg")
+		);
+	}
+	
 	/**
 	 * Creates a new instance of the Label control
 	 * 
