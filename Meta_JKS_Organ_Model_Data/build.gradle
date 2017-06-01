@@ -7,10 +7,19 @@ sourceSets {
             srcDir 'Map_Data_Visual'
             srcDir 'Meta_Models'
             srcDir 'Outils'
+            srcDir 'Quest_Dialogue'
         }
     }
     test {
     }
 }
 
+repositories {
+  maven { url "http://m2.objectdb.com" }
+  mavenCentral()
+}
 
+dependencies {
+  compile 'com.objectdb:objectdb:+'
+  compile 'org.eclipse.persistence:javax.persistence:+'
+}

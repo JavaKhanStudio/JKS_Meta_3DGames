@@ -17,7 +17,7 @@
 	</natures>
 	<filteredResources>
 		<filter>
-			<id>1489520836543</id>
+			<id>1496247169691</id>
 			<name></name>
 			<type>26</type>
 			<matcher>
@@ -33,6 +33,10 @@
 					</matcher>
 					<matcher>
 						<id>org.eclipse.ui.ide.multiFilter</id>
+						<arguments>1.0-projectRelativePath-equals-true-false-ShaderBlow</arguments>
+					</matcher>
+					<matcher>
+						<id>org.eclipse.ui.ide.multiFilter</id>
 						<arguments>1.0-projectRelativePath-equals-true-false-Meta_JKS_Organ_Model_Visuel</arguments>
 					</matcher>
 					<matcher>
@@ -42,6 +46,10 @@
 					<matcher>
 						<id>org.eclipse.ui.ide.multiFilter</id>
 						<arguments>1.0-projectRelativePath-equals-true-false-Meta_JKS_Tools_FromJME</arguments>
+					</matcher>
+					<matcher>
+						<id>org.eclipse.ui.ide.multiFilter</id>
+						<arguments>1.0-projectRelativePath-equals-true-false-Meta_JKS_DataBase</arguments>
 					</matcher>
 				</arguments>
 			</matcher>

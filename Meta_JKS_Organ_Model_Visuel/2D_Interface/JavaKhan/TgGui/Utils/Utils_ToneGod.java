@@ -12,10 +12,11 @@ import com.jme3.math.Vector2f;
 import com.jme3.math.Vector3f;
 import com.jme3.renderer.RenderManager;
 import com.jme3.renderer.ViewPort;
+import com.jme3.scene.Spatial;
 import com.jme3.scene.control.AbstractControl;
 
 import JKS_Head.GVars.GVars_Soul_Model;
-import JavaKhan.TgGui.Model.CleanTextLabel;
+import JavaKhan.TgGui.Model.TGuiM_Label_CleanText;
 import tonegod.gui.controls.text.Label;
 import tonegod.gui.controls.windows.Panel;
 import tonegod.gui.core.Element;
@@ -133,7 +134,7 @@ public class Utils_ToneGod
 	{
 		Label returning = new Label(element.getScreen(), element.getPosition(),Vector2f.ZERO) ;
 		
-		CleanTextLabel textLabel = new CleanTextLabel(new Vector2f(), textSize, text) ;
+		TGuiM_Label_CleanText textLabel = new TGuiM_Label_CleanText(new Vector2f(), textSize, text) ;
 		
 		if(textLabel.getWidth() > element.getWidth()) 
 		{
@@ -184,7 +185,7 @@ public class Utils_ToneGod
 		returning.setPosition(element.getPosition());
 		element.setPosition(0, 0);
 		
-		CleanTextLabel textLabel = new CleanTextLabel(Vector2f.ZERO,textSize,text) ;
+		TGuiM_Label_CleanText textLabel = new TGuiM_Label_CleanText(Vector2f.ZERO,textSize,text) ;
 		
 		setNextTo(textLabel,element,right) ;
 		
@@ -308,6 +309,37 @@ public class Utils_ToneGod
 	public static void goUpAndDie(Element element, int speed, int time) 
 	{
 		new goUpAndDie(element,speed,time) ;
+		
+	}
+	
+//	public static void getImCenterToIt(Element im, element it)
+//	{
+//		im.setP
+//	}
+	
+	public static void getImCenterToScreen(Element im,int decalX,int decalY)
+	{im.setPosition(GVars_Soul_Model.screen.getWidth()/2 - im.getWidth()/2 + decalX, GVars_Soul_Model.screen.getHeight()/2 - im.getHeight()/2 + decalY);}
+	
+	public static void setSizeRight(Element element)
+	{
+		float maxX = 0, maxY =0; 
+		Element current ; 
+		
+		for(Spatial children : element.getChildren())
+		{
+			try
+			{
+				current = ((Element)children) ;
+				
+				if(current.getWidth() + current.getPosition().x > maxX) 
+				{maxX = current.getWidth() + current.getPosition().x ;}
+				
+				if(current.getHeight() + current.getPosition().y > maxY) 
+				{maxY = current.getHeight() + current.getPosition().y ;}
+			}
+			catch(Exception e) 
+			{}
+		}
 		
 	}
 	

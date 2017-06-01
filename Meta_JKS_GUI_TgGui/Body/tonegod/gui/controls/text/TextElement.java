@@ -24,7 +24,8 @@ import tonegod.gui.framework.core.AnimText;
  *
  * @author t0neg0d
  */
-public abstract class TextElement extends Element implements Control {
+public abstract class TextElement extends Element implements Control 
+{
 	AnimText animText;
 	String teText = "";
 	boolean useTextClipping = false;
@@ -40,7 +41,8 @@ public abstract class TextElement extends Element implements Control {
 	 * 
 	 * @param screen The screen control the Element is to be added to
 	 */
-	public TextElement(ElementManager screen) {
+	public TextElement(ElementManager screen) 
+	{
 		this(screen, UIDUtil.getUID(), Vector2f.ZERO,
 			screen.getStyle("Label").getVector2f("defaultSize"),
 			Vector4f.ZERO,
@@ -54,7 +56,8 @@ public abstract class TextElement extends Element implements Control {
 	 * 
 	 * @param screen The screen control the Element is to be added to
 	 */
-	public TextElement(ElementManager screen, BitmapFont font) {
+	public TextElement(ElementManager screen, BitmapFont font) 
+	{
 		this(screen, UIDUtil.getUID(), Vector2f.ZERO,
 			screen.getStyle("Label").getVector2f("defaultSize"),
 			Vector4f.ZERO,
@@ -69,7 +72,8 @@ public abstract class TextElement extends Element implements Control {
 	 * @param screen The screen control the Element is to be added to
 	 * @param position A Vector2f containing the x/y position of the Element
 	 */
-	public TextElement(ElementManager screen, Vector2f position, BitmapFont font) {
+	public TextElement(ElementManager screen, Vector2f position, BitmapFont font) 
+	{
 		this(screen, UIDUtil.getUID(), position,
 			screen.getStyle("Label").getVector2f("defaultSize"),
 			Vector4f.ZERO,
@@ -85,7 +89,8 @@ public abstract class TextElement extends Element implements Control {
 	 * @param position A Vector2f containing the x/y position of the Element
 	 * @param dimensions A Vector2f containing the width/height dimensions of the Element
 	 */
-	public TextElement(ElementManager screen, Vector2f position, Vector2f dimensions, BitmapFont font) {
+	public TextElement(ElementManager screen, Vector2f position, Vector2f dimensions, BitmapFont font) 
+	{
 		this(screen, UIDUtil.getUID(), position, dimensions,
 			Vector4f.ZERO,
 			null,
@@ -102,9 +107,8 @@ public abstract class TextElement extends Element implements Control {
 	 * @param resizeBorders A Vector4f containg the border information used when resizing the default image (x = N, y = W, z = E, w = S)
 	 * @param defaultImg The default image to use for the Slider's track
 	 */
-	public TextElement(ElementManager screen, Vector2f position, Vector2f dimensions, Vector4f resizeBorders, String defaultImg, BitmapFont font) {
-		this(screen, UIDUtil.getUID(), position, dimensions,resizeBorders,defaultImg, font);
-	}
+	public TextElement(ElementManager screen, Vector2f position, Vector2f dimensions, Vector4f resizeBorders, String defaultImg, BitmapFont font) 
+	{this(screen, UIDUtil.getUID(), position, dimensions,resizeBorders,defaultImg, font);}
 	
 	/**
 	 * Creates a new instance of the TextElement control
@@ -113,7 +117,8 @@ public abstract class TextElement extends Element implements Control {
 	 * @param UID A unique String identifier for the Element
 	 * @param position A Vector2f containing the x/y position of the Element
 	 */
-	public TextElement(ElementManager screen, String UID, Vector2f position, BitmapFont font) {
+	public TextElement(ElementManager screen, String UID, Vector2f position, BitmapFont font) 
+	{
 		this(screen, UID, position,
 			screen.getStyle("Label").getVector2f("defaultSize"),
 			Vector4f.ZERO,
@@ -130,7 +135,8 @@ public abstract class TextElement extends Element implements Control {
 	 * @param position A Vector2f containing the x/y position of the Element
 	 * @param dimensions A Vector2f containing the width/height dimensions of the Element
 	 */
-	public TextElement(ElementManager screen, String UID, Vector2f position, Vector2f dimensions, BitmapFont font) {
+	public TextElement(ElementManager screen, String UID, Vector2f position, Vector2f dimensions, BitmapFont font) 
+	{
 		this(screen, UID, position, dimensions,
 			Vector4f.ZERO,
 			null,
@@ -148,7 +154,8 @@ public abstract class TextElement extends Element implements Control {
 	 * @param resizeBorders A Vector4f containg the border information used when resizing the default image (x = N, y = W, z = E, w = S)
 	 * @param defaultImg The default image to use for the Slider's track
 	 */
-	public TextElement(ElementManager screen, String UID, Vector2f position, Vector2f dimensions, Vector4f resizeBorders, String defaultImg, BitmapFont font) {
+	public TextElement(ElementManager screen, String UID, Vector2f position, Vector2f dimensions, Vector4f resizeBorders, String defaultImg, BitmapFont font) 
+	{
 		super(screen, UID, position, dimensions, resizeBorders, defaultImg);
 		this.setIsResizable(false);
 		this.setIsMovable(false);

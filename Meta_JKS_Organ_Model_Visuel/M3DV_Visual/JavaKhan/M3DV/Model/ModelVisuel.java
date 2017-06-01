@@ -53,7 +53,7 @@ public abstract class ModelVisuel extends Node implements basicImpl
 	public ModelVisuel(String path)
 	{
 		
-		main = buildSpatial(asset) ;
+		main = Utils_3DObject.loadDirect(path) ;
 		this.attachChild(main) ; 
 	}
 
@@ -72,6 +72,7 @@ public abstract class ModelVisuel extends Node implements basicImpl
 	
 	public Spatial buildSpatial(Indexed_AssetModel asset)
 	{
+		System.out.println(asset.getSpatialPath());
 		main = Utils_3DObject.loadDirect(asset.getSpatialPath()) ;
 		
 		main.scale(asset.getSize()) ; 

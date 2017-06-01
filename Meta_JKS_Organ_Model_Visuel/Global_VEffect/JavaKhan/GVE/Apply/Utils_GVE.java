@@ -57,8 +57,22 @@ public class Utils_GVE
 				{applyInto.getViewPort().addProcessor(volatileFPP); return null ; }
 			});
 			
-			resetFilter() ; 
+			resetBaseFilter(volatileFPP) ; 
 		}
+		else 
+		{}
+		
+//		if(solidFPP == null)
+//		{
+//			solidFPP = new FilterPostProcessor(applyInto.getAssetManager());
+//			
+//			GVars_Soul_Model.app.enqueue(new Callable<Object>()
+//			{public Void call()
+//				{applyInto.getViewPort().addProcessor(solidFPP); return null ; }
+//			});
+//			
+////			resetBaseFilter(solidFPP);
+//		}
 	}
 	
 	public static void ApplyFilter(GE_Filter applyIm)
@@ -71,10 +85,8 @@ public class Utils_GVE
 			{public Void call()
 				{applyInto.getViewPort().addProcessor(volatileFPP); return null ; }
 			});
-			
-			resetFilter() ; 
-			
 		}
+		
 		switch(applyIm.getName())
 		{
 			case GE_LakeWater.name :
@@ -86,27 +98,35 @@ public class Utils_GVE
 		}
 	}
 	
-	public static void resetFilter()
+	public static void resetFilter(FilterPostProcessor FPP)
 	{
-	
-		
 		GVars_Soul_Model.app.enqueue(new Callable<Object>()
 		{
 			public Void call()
 			{
-				volatileFPP.removeAllFilters();
+				FPP.removeAllFilters();
+				return null ; 
+			}
+		});
+	}
+	
+	public static void resetBaseFilter(FilterPostProcessor FPP)
+	{
+		GVars_Soul_Model.app.enqueue(new Callable<Object>()
+		{
+			public Void call()
+			{
+				FPP.removeAllFilters();
 				
-				TranslucentBucketFilter  translucent_Filter = new TranslucentBucketFilter() ;
-				
+				TranslucentBucketFilter  translucent_Filter = new TranslucentBucketFilter(true) ;
 				BloomFilter bloom_Filter = new BloomFilter(BloomFilter.GlowMode.Objects);
 				bloom_Filter.setDownSamplingFactor(1.0f); 
 				bloom_Filter.setBlurScale(0.66f);
 				bloom_Filter.setExposurePower(1);
 				bloom_Filter.setExposureCutOff(1);
 				
-				Utils_GVE.safe_Volatile_Filter_Add(translucent_Filter);
-				Utils_GVE.safe_Volatile_Filter_Add(bloom_Filter);
-				
+				FPP.addFilter(translucent_Filter);
+				FPP.addFilter(bloom_Filter);
 				return null ; 
 			}
 		});
@@ -116,7 +136,9 @@ public class Utils_GVE
 	{
 		GVars_Soul_Model.app.enqueue(new Callable<Object>()
 		{public Void call()
-			{volatileFPP.addFilter(fill); return null;}
+			{
+				volatileFPP.addFilter(fill); return null;
+			}
 		}) ; 
 	}
 	
@@ -211,6 +233,12 @@ public class Utils_GVE
 
 	public static FilterPostProcessor getVolatileFilter() 
 	{return volatileFPP;}
+
+	public static void resetFilters() 
+	{
+		resetFilter(volatileFPP);
+		
+	}
 	
 	
 }

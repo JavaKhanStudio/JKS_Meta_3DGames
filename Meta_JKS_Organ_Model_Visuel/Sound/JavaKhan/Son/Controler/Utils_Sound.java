@@ -158,20 +158,21 @@ public class Utils_Sound
 	}
 	
 	
-	public static void makeASound(final String path,final float volume)
-	{makeASound(path,volume,1) ;}
+	public static AudioNode makeASound(final String path)
+	{return makeASound(path,10,1) ;}
 	
-	public static void makeASound(final String path,final float volume,float speed)
+	public static AudioNode makeASound(final String path,final float volume)
+	{return makeASound(path,volume,1) ;}
+	
+	public static AudioNode makeASound(final String path,final float volume,float speed)
 	{
-		
 		if(!GVars_SoundsSettings.allMuted)
 		{
+			final AudioNode sound = new AudioNode(GVars_Soul_Model.app.getAssetManager(), path, false) ; 
 			GVars_Soul_Model.app.enqueue(new Callable<Object>()
 			{
 				public Void call()
 				{
-					AudioNode sound ;
-					sound = new AudioNode(GVars_Soul_Model.app.getAssetManager(), path, false) ; 
 					sound.setName("Audio Bruitage");
 					sound.setPositional(false);
 				    sound.setLooping(false);
@@ -180,11 +181,14 @@ public class Utils_Sound
 				    GVars_Soul_Model.app.getRootNode().attachChild(sound) ;
 				    
 					sound.play();
+		
 					return null ; 
 				}
 			});
-		
+			return sound ; 
 		}
+		
+		return null ; 
 	    
 	}
 	

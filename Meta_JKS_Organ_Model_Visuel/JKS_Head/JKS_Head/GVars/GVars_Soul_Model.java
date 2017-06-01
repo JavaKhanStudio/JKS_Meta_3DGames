@@ -10,7 +10,7 @@ import Camera.Enum_CamType;
 import JavaKhan.TgGui.InfoBox.IB_AInfoBox_Model;
 import tonegod.gui.core.Screen;
 
-public class GVars_Soul_Model 
+public abstract class GVars_Soul_Model 
 {
 
 	public static SimpleApplication app ;
@@ -28,6 +28,8 @@ public class GVars_Soul_Model
 		app.getGuiNode().addControl(screen);
 	}
 	
+	
+	protected abstract void personalInit() ;
 	
 	public static AssetManager getAssetManager()
 	{return app.getAssetManager();}

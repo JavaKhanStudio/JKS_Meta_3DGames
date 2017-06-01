@@ -1,5 +1,5 @@
 #org.springsource.ide.eclipse.gradle.core.preferences.GradleProjectPreferences
-#Thu Feb 09 13:58:55 CET 2017
+#Wed May 31 18:12:49 CEST 2017
 build.family.org.gradle.tooling.model.eclipse.HierarchicalEclipseProject=;
 org.springsource.ide.eclipse.gradle.linkedresources=
-org.springsource.ide.eclipse.gradle.rootprojectloc=..
+org.springsource.ide.eclipse.gradle.rootprojectloc=../../rip_Game/jks_rip_tools

@@ -12,13 +12,19 @@ sourceSets {
 }
 
 ext.jmeVersion = '[3.1,)'
-
+repositories 
+{
+	jcenter()  
+    maven { url "http://m2.objectdb.com" }
+    mavenCentral()
+}
 dependencies 
 {
-	compile project(':Meta_JKS_Organ_Model_Data')
-    compile project(':Meta_JKS_Organ_Model_Visuel')
-    
-    compile "org.jmonkeyengine:jme3-core:$jmeVersion"
+	compile "org.jmonkeyengine:jme3-core:$jmeVersion"
     compile "org.jmonkeyengine:jme3-desktop:$jmeVersion"
     compile "org.jmonkeyengine:jme3-lwjgl:$jmeVersion"
+    compile "org.jmonkeyengine:jme3-bullet:$jmeVersion"
+    
+    compile project(':Meta_JKS_Organ_Model_Data')
+    compile project(':Meta_JKS_Organ_Model_Visuel')
 }

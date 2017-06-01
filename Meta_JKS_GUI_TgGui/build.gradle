@@ -8,8 +8,21 @@ sourceSets {
             srcDir 'Body'
             srcDir 'Mind'
             srcDir 'nbproject'
+            srcDir 'Utils'
         }
     }
     test {
     }
+}
+
+
+repositories {
+    jcenter()
+}
+
+ext.jmeVersion = '[3.1,)'
+dependencies {
+
+	compile "org.jmonkeyengine:jme3-core:$jmeVersion"
+	compile "org.jmonkeyengine:jme3-desktop:$jmeVersion"
 }

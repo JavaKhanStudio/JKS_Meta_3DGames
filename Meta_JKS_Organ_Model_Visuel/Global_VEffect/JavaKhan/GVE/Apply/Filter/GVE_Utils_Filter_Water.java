@@ -26,7 +26,6 @@ public class GVE_Utils_Filter_Water
 		
 		Utils_GVE.safe_Volatile_Filter_Add(water);
 		
-		
 		TranslucentBucketFilter  filter = new TranslucentBucketFilter() ;
 		
 		Utils_GVE.safe_Volatile_Filter_Add(filter);

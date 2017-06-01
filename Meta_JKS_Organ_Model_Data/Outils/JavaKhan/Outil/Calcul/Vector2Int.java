@@ -2,9 +2,6 @@ package JavaKhan.Outil.Calcul;
 
 import javax.persistence.Embeddable;
 
-
-
-
 @Embeddable
 public class Vector2Int 
 {
@@ -103,7 +100,7 @@ public class Vector2Int
 		if(
 			((Vector2Int)object).x == this.x &&
 			((Vector2Int)object).y == this.y
-			)	
+		  )	
 			{return true ;}
 		else
 			{return false ;}
