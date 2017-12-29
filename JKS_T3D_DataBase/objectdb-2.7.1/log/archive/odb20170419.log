@@ -1,0 +1,151 @@
+------------------------------------------------------------------------------------------------------------------------
+
+[2017-04-19 14:10:20 #1 server] 
+Server on port 6136 has started by 15336@LGOP1160
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2017-04-19 15:41:27 #1 server] 
+Server on port 6136 has started by 13076@LGOP1160
+
+[2017-04-19 15:41:40 #2 store] 
+Database 'C:\Users\S.Bedard\Documents\jks_meta\Meta_JKS_DataBase\objectdb-2.7.1\db\Account.odb' is opened by 13076@LGOP1160
+
+[2017-04-19 15:41:40 #3 store] 
+Database 'C:\Users\S.Bedard\Documents\jks_meta\Meta_JKS_DataBase\objectdb-2.7.1\db\InsideServer.odb' is opened by 13076@LGOP1160
+
+[2017-04-19 15:41:41 #4 store] 
+Database 'C:\Users\S.Bedard\Documents\jks_meta\Meta_JKS_DataBase\objectdb-2.7.1\db\Sort.odb' is opened by 13076@LGOP1160
+
+[2017-04-19 15:41:41 #5 store] 
+Database 'C:\Users\S.Bedard\Documents\jks_meta\Meta_JKS_DataBase\objectdb-2.7.1\db\Asset.odb' is opened by 13076@LGOP1160
+
+[2017-04-19 15:41:41 #6 store] 
+Database 'C:\Users\S.Bedard\Documents\jks_meta\Meta_JKS_DataBase\objectdb-2.7.1\db\Monster.odb' is opened by 13076@LGOP1160
+
+[2017-04-19 15:41:42 #7 store] 
+Database 'C:\Users\S.Bedard\Documents\jks_meta\Meta_JKS_DataBase\objectdb-2.7.1\db\Obstacle.odb' is opened by 13076@LGOP1160
+
+[2017-04-19 15:41:42 #8 store] 
+Database 'C:\Users\S.Bedard\Documents\jks_meta\Meta_JKS_DataBase\objectdb-2.7.1\db\Decoration.odb' is opened by 13076@LGOP1160
+
+[2017-04-19 15:41:42 #9 store] 
+Database 'C:\Users\S.Bedard\Documents\jks_meta\Meta_JKS_DataBase\objectdb-2.7.1\db\Obstacle.odb' is closed by 13076@LGOP1160
+
+[2017-04-19 15:41:42 #10 store] 
+Database 'C:\Users\S.Bedard\Documents\jks_meta\Meta_JKS_DataBase\objectdb-2.7.1\db\Monster.odb' is closed by 13076@LGOP1160
+
+[2017-04-19 15:41:42 #11 store] 
+Database 'C:\Users\S.Bedard\Documents\jks_meta\Meta_JKS_DataBase\objectdb-2.7.1\db\Decoration.odb' is closed by 13076@LGOP1160
+
+[2017-04-19 15:41:42 #12 store] 
+Database 'C:\Users\S.Bedard\Documents\jks_meta\Meta_JKS_DataBase\objectdb-2.7.1\db\Sort.odb' is closed by 13076@LGOP1160
+
+[2017-04-19 15:41:42 #13 store] 
+Database 'C:\Users\S.Bedard\Documents\jks_meta\Meta_JKS_DataBase\objectdb-2.7.1\db\InsideServer.odb' is closed by 13076@LGOP1160
+
+[2017-04-19 15:41:42 #14 store] 
+Database 'C:\Users\S.Bedard\Documents\jks_meta\Meta_JKS_DataBase\objectdb-2.7.1\db\Account.odb' is closed by 13076@LGOP1160
+
+[2017-04-19 15:41:42 #15 store] 
+Database 'C:\Users\S.Bedard\Documents\jks_meta\Meta_JKS_DataBase\objectdb-2.7.1\db\Asset.odb' is closed by 13076@LGOP1160
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2017-04-19 15:43:00 #1 store] 
+Database 'C:\Users\S.Bedard\Documents\jks_meta\Meta_JKS_DataBase\objectdb-2.7.1\db\Decoration.odb' is opened by 14884@LGOP1160
+
+[2017-04-19 15:43:42 #2 store] 
+Database 'C:\Users\S.Bedard\Documents\jks_meta\Meta_JKS_DataBase\objectdb-2.7.1\db\Decoration.odb' is closed by 14884@LGOP1160
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2017-04-19 15:43:49 #1 store] 
+Database 'C:\Users\S.Bedard\Documents\jks_meta\Meta_JKS_DataBase\objectdb-2.7.1\db\InsideServer.odb' is opened by 388@LGOP1160
+
+[2017-04-19 15:43:56 #2 store] 
+Database 'C:\Users\S.Bedard\Documents\jks_meta\Meta_JKS_DataBase\objectdb-2.7.1\db\InsideServer.odb' is closed by 388@LGOP1160
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2017-04-19 15:44:02 #1 store] 
+Database 'C:\Users\S.Bedard\Documents\jks_meta\Meta_JKS_DataBase\objectdb-2.7.1\db\points.odb' is opened by 5228@LGOP1160
+
+[2017-04-19 15:44:07 #2 store] 
+Database 'C:\Users\S.Bedard\Documents\jks_meta\Meta_JKS_DataBase\objectdb-2.7.1\db\points.odb' is closed by 5228@LGOP1160
+
+[2017-04-19 16:06:59 #16 store] 
+Database 'C:\Users\S.Bedard\Documents\jks_meta\Meta_JKS_DataBase\objectdb-2.7.1\db\Sort.odb' is opened by 13076@LGOP1160
+
+[2017-04-19 16:06:59 #17 store] 
+Database 'C:\Users\S.Bedard\Documents\jks_meta\Meta_JKS_DataBase\objectdb-2.7.1\db\Map.odb' is opened by 13076@LGOP1160
+
+[2017-04-19 16:06:59 #18 store] 
+Database 'C:\Users\S.Bedard\Documents\jks_meta\Meta_JKS_DataBase\objectdb-2.7.1\db\Asset.odb' is opened by 13076@LGOP1160
+
+[2017-04-19 16:06:59 #19 store] 
+Database 'C:\Users\S.Bedard\Documents\jks_meta\Meta_JKS_DataBase\objectdb-2.7.1\db\Obstacle.odb' is opened by 13076@LGOP1160
+
+[2017-04-19 16:06:59 #20 store] 
+Database 'C:\Users\S.Bedard\Documents\jks_meta\Meta_JKS_DataBase\objectdb-2.7.1\db\Decoration.odb' is opened by 13076@LGOP1160
+
+[2017-04-19 16:06:59 #21 store] 
+Database 'C:\Users\S.Bedard\Documents\jks_meta\Meta_JKS_DataBase\objectdb-2.7.1\db\Monster.odb' is opened by 13076@LGOP1160
+
+[2017-04-19 16:07:19 #22 store] 
+Database 'C:\Users\S.Bedard\Documents\jks_meta\Meta_JKS_DataBase\objectdb-2.7.1\db\Sort.odb' is closed by 13076@LGOP1160
+
+[2017-04-19 16:07:19 #23 store] 
+Database 'C:\Users\S.Bedard\Documents\jks_meta\Meta_JKS_DataBase\objectdb-2.7.1\db\Decoration.odb' is closed by 13076@LGOP1160
+
+[2017-04-19 16:07:19 #24 store] 
+Database 'C:\Users\S.Bedard\Documents\jks_meta\Meta_JKS_DataBase\objectdb-2.7.1\db\Monster.odb' is closed by 13076@LGOP1160
+
+[2017-04-19 16:07:19 #25 store] 
+Database 'C:\Users\S.Bedard\Documents\jks_meta\Meta_JKS_DataBase\objectdb-2.7.1\db\Obstacle.odb' is closed by 13076@LGOP1160
+
+[2017-04-19 16:07:19 #26 store] 
+Database 'C:\Users\S.Bedard\Documents\jks_meta\Meta_JKS_DataBase\objectdb-2.7.1\db\Asset.odb' is closed by 13076@LGOP1160
+
+[2017-04-19 16:07:19 #27 store] 
+Database 'C:\Users\S.Bedard\Documents\jks_meta\Meta_JKS_DataBase\objectdb-2.7.1\db\Map.odb' is closed by 13076@LGOP1160
+
+[2017-04-19 16:07:26 #28 store] 
+Database 'C:\Users\S.Bedard\Documents\jks_meta\Meta_JKS_DataBase\objectdb-2.7.1\db\Sort.odb' is opened by 13076@LGOP1160
+
+[2017-04-19 16:07:27 #29 store] 
+Database 'C:\Users\S.Bedard\Documents\jks_meta\Meta_JKS_DataBase\objectdb-2.7.1\db\Map.odb' is opened by 13076@LGOP1160
+
+[2017-04-19 16:07:27 #30 store] 
+Database 'C:\Users\S.Bedard\Documents\jks_meta\Meta_JKS_DataBase\objectdb-2.7.1\db\Asset.odb' is opened by 13076@LGOP1160
+
+[2017-04-19 16:07:27 #31 store] 
+Database 'C:\Users\S.Bedard\Documents\jks_meta\Meta_JKS_DataBase\objectdb-2.7.1\db\Obstacle.odb' is opened by 13076@LGOP1160
+
+[2017-04-19 16:07:27 #32 store] 
+Database 'C:\Users\S.Bedard\Documents\jks_meta\Meta_JKS_DataBase\objectdb-2.7.1\db\Decoration.odb' is opened by 13076@LGOP1160
+
+[2017-04-19 16:07:27 #33 store] 
+Database 'C:\Users\S.Bedard\Documents\jks_meta\Meta_JKS_DataBase\objectdb-2.7.1\db\Monster.odb' is opened by 13076@LGOP1160
+
+[2017-04-19 16:13:03 #34 store] 
+Database 'C:\Users\S.Bedard\Documents\jks_meta\Meta_JKS_DataBase\objectdb-2.7.1\db\Sort.odb' is closed by 13076@LGOP1160
+
+[2017-04-19 16:13:03 #35 store] 
+Database 'C:\Users\S.Bedard\Documents\jks_meta\Meta_JKS_DataBase\objectdb-2.7.1\db\Map.odb' is closed by 13076@LGOP1160
+
+[2017-04-19 16:13:03 #36 store] 
+Database 'C:\Users\S.Bedard\Documents\jks_meta\Meta_JKS_DataBase\objectdb-2.7.1\db\Asset.odb' is closed by 13076@LGOP1160
+
+[2017-04-19 16:13:03 #37 store] 
+Database 'C:\Users\S.Bedard\Documents\jks_meta\Meta_JKS_DataBase\objectdb-2.7.1\db\Obstacle.odb' is closed by 13076@LGOP1160
+
+[2017-04-19 16:13:03 #38 store] 
+Database 'C:\Users\S.Bedard\Documents\jks_meta\Meta_JKS_DataBase\objectdb-2.7.1\db\Decoration.odb' is closed by 13076@LGOP1160
+
+[2017-04-19 16:13:03 #39 store] 
+Database 'C:\Users\S.Bedard\Documents\jks_meta\Meta_JKS_DataBase\objectdb-2.7.1\db\Monster.odb' is closed by 13076@LGOP1160
+
+[2017-04-19 16:13:03 #40 server] 
+Server on port 6136 has stopped by 13076@LGOP1160
+

@@ -1,0 +1,36 @@
+apply plugin: "java"
+
+sourceSets 
+{
+    main 
+    {
+        java 
+        {
+            srcDir 'M3DV_Character'
+        }
+    }
+}
+
+eclipse.project {
+    name = appName + "BulletSpace"
+}
+
+
+
+repositories 
+{
+	jcenter()  
+    maven { url "http://m2.objectdb.com" }
+    mavenCentral()
+}
+
+dependencies 
+{
+	compile "org.jmonkeyengine:jme3-core:$jmeVersion"
+    compile "org.jmonkeyengine:jme3-desktop:$jmeVersion"
+    compile "org.jmonkeyengine:jme3-lwjgl:$jmeVersion"
+    compile "org.jmonkeyengine:jme3-bullet:$jmeVersion"
+    
+    compile project(':JKS_T3D_Organ_Data')
+    compile project(':JKS_T3D_Organ_Visuel')
+}

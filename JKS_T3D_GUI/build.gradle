@@ -1,0 +1,33 @@
+apply plugin: "java"
+
+sourceSets 
+{
+    main 
+    {
+        java 
+        {
+            srcDir 'Asset'
+            srcDir 'Body'
+            srcDir 'Mind'
+            srcDir 'nbproject'
+            srcDir 'Utils'
+        }
+    }
+}
+
+
+eclipse.project {
+    name = appName + "GUI"
+}
+
+
+repositories {
+    jcenter()
+}
+
+ext.jmeVersion = '[3.1,)'
+dependencies {
+
+	compile "org.jmonkeyengine:jme3-core:$jmeVersion"
+	compile "org.jmonkeyengine:jme3-desktop:$jmeVersion"
+}

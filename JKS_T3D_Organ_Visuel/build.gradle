@@ -1,0 +1,53 @@
+apply plugin: "java"
+
+sourceSets 
+{
+    main 
+    {
+        java 
+        {
+            srcDir 'Camera'
+            srcDir 'Global_VEffect'
+            srcDir 'JKS_Head'
+            srcDir 'Keys'
+            srcDir 'M3DV_Visual'
+            srcDir 'Single_VEffect'
+            srcDir 'Sound'
+            srcDir 'Threaded_Action'
+            srcDir 'VEffect'
+            srcDir 'Sky'
+            srcDir '2D_Interface'
+        }
+    } 
+}
+
+eclipse.project {
+    name = appName + "Organ_Visuel"
+}
+
+
+repositories {
+	jcenter()
+	maven { url "http://m2.objectdb.com" }
+	mavenCentral()
+}
+
+ jar {
+     from sourceSets.main.allSource
+ }
+
+
+dependencies 
+{
+    compile "org.jmonkeyengine:jme3-lwjgl3:$jmeVersion"
+    compile "org.jmonkeyengine:jme3-effects:$jmeVersion"
+    compile "org.jmonkeyengine:jme3-core:$jmeVersion"
+	compile project(':JKS_T3D_Organ_Data')
+    compile project(':JKS_T3D_GUI')
+    compile project(':JKS_T3D_ToolsFromJME')
+    
+    compile 'com.objectdb:objectdb:+'
+    compile 'org.eclipse.persistence:javax.persistence:+'
+    compile 'org.lwjgl.lwjgl:lwjgl:2.9.3'
+
+}

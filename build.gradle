@@ -1,19 +1,31 @@
-apply plugin: 'java'
-apply plugin: 'idea'
-
-
-sourceSets {
-    main {
-        java {
-            srcDir 'Main'
-        }
-    }
-    test {
-    }
-}
-
-
 
 task wrapper(type: Wrapper) {
 }
 
+allprojects 
+{
+    apply plugin: "eclipse"
+    apply plugin: "idea"
+
+    version = '1.0'
+    
+    ext 
+    {
+        appName = 'JKS_T3D_'
+        ext.jmeVersion = '[3.1,)'
+    }
+
+    repositories 
+    {
+      jcenter()  
+      maven { url "http://m2.objectdb.com" }
+      mavenCentral()
+    }
+}
+
+task show {
+    doLast {
+        // Use inherited property
+        println 'test: '
+    }
+}

@@ -1,6 +1,6 @@
 #org.springsource.ide.eclipse.gradle.core.preferences.GradleProjectPreferences
-#Wed Apr 19 14:20:23 CEST 2017
-build.family.org.gradle.tooling.model.eclipse.HierarchicalEclipseProject=;Meta_JKS_BulletSpace;Meta_JKS_DataBase;Meta_JKS_GUI_TgGui;Meta_JKS_Organ_Model_Data;Meta_JKS_Organ_Model_Visuel;Meta_JKS_Tools_FromJME;ShaderBlow;
+#Fri Dec 29 13:35:15 CET 2017
+build.family.org.gradle.tooling.model.eclipse.HierarchicalEclipseProject=;JKS_T3D_BulletSpace;JKS_T3D_DataBase;JKS_T3D_GUI;JKS_T3D_Organ_Data;JKS_T3D_Organ_Visuel;JKS_T3D_ShaderBlow;JKS_T3D_ToolsFromJME;
 org.springsource.ide.eclipse.gradle.classname.enableSorting=false
 org.springsource.ide.eclipse.gradle.classpath.enableSorting=true
 org.springsource.ide.eclipse.gradle.linkedresources=

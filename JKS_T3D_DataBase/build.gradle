@@ -1,0 +1,24 @@
+apply plugin: "java"
+
+sourceSets 
+{
+    main 
+    {
+        java 
+        {srcDir 'DataSource'}
+    }
+}
+
+eclipse.project {
+    name = appName + "DataBase"
+}
+
+
+
+dependencies {
+ compile files('objectdb-2.7.1/bin/objectdb.jar')
+}
+
+task wrapper(type: Wrapper) {
+}
+

@@ -1,0 +1,37 @@
+apply plugin: "java"
+
+sourceSets 
+{
+    main 
+    {
+        java 
+        {
+            srcDir 'Map_Data_Visual'
+            srcDir 'Meta_Models'
+            srcDir 'Outils'
+            srcDir 'Quest_Dialogue'
+        }
+    }
+}
+
+eclipse.project {
+    name = appName + "Organ_Data"
+}
+
+
+repositories {
+  maven { url "http://m2.objectdb.com" }
+  mavenCentral()
+}
+
+dependencies {
+  compile 'com.objectdb:objectdb:+'
+  compile 'org.eclipse.persistence:javax.persistence:+'
+}
+
+task buildAll {
+   doLast {
+   		compile fileTree(dir: 'lib', include: '*.jar')
+      println 'tutorialspoint'
+   }
+}

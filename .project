@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>jks_meta</name>
+	<name>JKS_Tools3D_Meta</name>
 	<comment></comment>
 	<projects>
 	</projects>
@@ -17,7 +17,7 @@
 	</natures>
 	<filteredResources>
 		<filter>
-			<id>1496247169691</id>
+			<id>1514550930400</id>
 			<name></name>
 			<type>26</type>
 			<matcher>
@@ -25,31 +25,31 @@
 				<arguments>
 					<matcher>
 						<id>org.eclipse.ui.ide.multiFilter</id>
-						<arguments>1.0-projectRelativePath-equals-true-false-Meta_JKS_BulletSpace</arguments>
+						<arguments>1.0-projectRelativePath-equals-true-false-JKS_T3D_Organ_Data</arguments>
 					</matcher>
 					<matcher>
 						<id>org.eclipse.ui.ide.multiFilter</id>
-						<arguments>1.0-projectRelativePath-equals-true-false-Meta_JKS_Organ_Model_Data</arguments>
+						<arguments>1.0-projectRelativePath-equals-true-false-JKS_T3D_BulletSpace</arguments>
 					</matcher>
 					<matcher>
 						<id>org.eclipse.ui.ide.multiFilter</id>
-						<arguments>1.0-projectRelativePath-equals-true-false-ShaderBlow</arguments>
+						<arguments>1.0-projectRelativePath-equals-true-false-JKS_T3D_DataBase</arguments>
 					</matcher>
 					<matcher>
 						<id>org.eclipse.ui.ide.multiFilter</id>
-						<arguments>1.0-projectRelativePath-equals-true-false-Meta_JKS_Organ_Model_Visuel</arguments>
+						<arguments>1.0-projectRelativePath-equals-true-false-JKS_T3D_ToolsFromJME</arguments>
 					</matcher>
 					<matcher>
 						<id>org.eclipse.ui.ide.multiFilter</id>
-						<arguments>1.0-projectRelativePath-equals-true-false-Meta_JKS_GUI_TgGui</arguments>
+						<arguments>1.0-projectRelativePath-equals-true-false-JKS_T3D_GUI</arguments>
 					</matcher>
 					<matcher>
 						<id>org.eclipse.ui.ide.multiFilter</id>
-						<arguments>1.0-projectRelativePath-equals-true-false-Meta_JKS_Tools_FromJME</arguments>
+						<arguments>1.0-projectRelativePath-equals-true-false-JKS_T3D_Organ_Visuel</arguments>
 					</matcher>
 					<matcher>
 						<id>org.eclipse.ui.ide.multiFilter</id>
-						<arguments>1.0-projectRelativePath-equals-true-false-Meta_JKS_DataBase</arguments>
+						<arguments>1.0-projectRelativePath-equals-true-false-JKS_T3D_ShaderBlow</arguments>
 					</matcher>
 				</arguments>
 			</matcher>

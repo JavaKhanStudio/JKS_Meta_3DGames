@@ -1,0 +1,34 @@
+apply plugin: "java"
+
+sourceSets 
+{
+    main 
+    {
+        java 
+        {
+            srcDir 'assets'
+            srcDir 'src'
+            srcDir 'Test-data'
+            srcDir 'test-src'
+        }
+    }
+}
+
+
+eclipse.project {
+    name = appName + "ShaderBlow"
+}
+
+
+repositories {
+	jcenter()
+	maven { url "http://m2.objectdb.com" }
+	mavenCentral()
+}
+
+dependencies 
+{
+    compile "org.jmonkeyengine:jme3-lwjgl3:$jmeVersion"
+    compile "org.jmonkeyengine:jme3-effects:$jmeVersion"
+    compile "org.jmonkeyengine:jme3-core:$jmeVersion"
+}
