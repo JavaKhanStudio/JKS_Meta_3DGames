@@ -1,0 +1,8 @@
+Material My Material : Common/MatDefs/Light/Lighting.j3md {
+     MaterialParameters {
+        DiffuseMap : Repeat JavaKhan/Texture/Rock/Cubblestone_3/Rock_Painted_2.jpg
+        NormalMap : Repeat JavaKhan/Texture/Rock/Cubblestone_3/Rock_Painted_2_Norm.png
+     }
+    AdditionalRenderState {
+    }
+}

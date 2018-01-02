@@ -1,0 +1,10 @@
+Material My Material : Common/MatDefs/Light/Lighting.j3md {
+     MaterialParameters {
+        DiffuseMap : Flip Repeat JavaKhan/Texture/Metal/Futur_Vein/Metal_BlueVeins.png
+        NormalMap : Flip Repeat JavaKhan/Texture/Metal/Futur_Vein/Metal_BlueVeins_Norm.png
+        SpecularMap : Flip Repeat JavaKhan/Texture/Metal/Futur_Vein/Metal_BlueVeins_Spec.png
+        GlowMap : Flip Repeat JavaKhan/Texture/Metal/Futur_Vein/Glow.png
+     }
+    AdditionalRenderState {
+    }
+}

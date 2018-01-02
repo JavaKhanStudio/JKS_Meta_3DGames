@@ -1,0 +1,52 @@
+apply plugin: "java"
+
+sourceSets 
+{
+    main 
+    {
+        java 
+        {
+            srcDir 'Assets'
+            srcDir 'Visuel'
+        }
+    } 
+}
+
+eclipse.project {
+    name = appName + "Tests"
+}
+
+
+repositories {
+	jcenter()
+	maven { url "http://m2.objectdb.com" }
+	mavenCentral()
+}
+
+ jar {
+     from sourceSets.main.allSource
+ }
+
+
+dependencies 
+{
+    compile "org.jmonkeyengine:jme3-core:$jmeVersion"
+    compile "org.jmonkeyengine:jme3-desktop:$jmeVersion"
+    compile "org.jmonkeyengine:jme3-lwjgl:$jmeVersion"
+    
+    compile "org.jmonkeyengine:jme3-effects:$jmeVersion"
+    
+    compile "org.jmonkeyengine:jme3-bullet-native:$jmeVersion"
+    compile "org.jmonkeyengine:jme3-bullet:$jmeVersion"
+    
+    compile 'com.objectdb:objectdb:+'
+    compile 'org.eclipse.persistence:javax.persistence:+'
+
+    
+    compile project(':JKS_T3D_Organ_Data')
+    compile project(':JKS_T3D_Organ_Visuel')
+    compile project(':JKS_T3D_BulletSpace')
+    compile project(':JKS_T3D_GUI')
+    compile project(':JKS_T3D_ToolsFromJME')
+
+}

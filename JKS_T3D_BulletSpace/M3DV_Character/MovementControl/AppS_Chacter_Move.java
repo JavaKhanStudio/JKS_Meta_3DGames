@@ -3,12 +3,12 @@ package MovementControl;
 import com.jme3.app.state.AbstractAppState;
 import com.jme3.math.Vector3f;
 
-import Camera.Settings_Camera;
-import Clavier.Control_Clavier;
-import CollisionEvent.PlayerCharacterControl;
-import Data.Charac_Main;
-import JKS_Head.GVars.GVars_Soul_Model;
-import JavaKhan.Enums.Enum_Animation;
+import JKS.T3D.Camera.Settings_Camera;
+import JKS.T3D.Clavier.Control_Clavier;
+import JKS.T3D.CollisionEvent.PlayerCharacterControl;
+import JKS.T3D.Data.Charac_Main;
+import JKS.T3D.Enums.Enum_Animation;
+import JKS.T3D.Head.GVars.GVars_Soul_Model;
 
 public class AppS_Chacter_Move extends AbstractAppState
 {

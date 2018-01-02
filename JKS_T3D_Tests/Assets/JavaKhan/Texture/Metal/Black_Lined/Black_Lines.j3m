@@ -1,0 +1,7 @@
+Material My Material : Common/MatDefs/Light/Lighting.j3md {
+     MaterialParameters {
+        DiffuseMap : JavaKhan/Texture/Metal/Black_Lined/dark-metal-texture.jpg
+     }
+    AdditionalRenderState {
+    }
+}

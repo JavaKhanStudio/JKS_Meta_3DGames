@@ -1,0 +1,8 @@
+Material My Material : Common/MatDefs/Light/Lighting.j3md {
+     MaterialParameters {
+        DiffuseMap : Repeat JavaKhan/Texture/Lava/Blue_Lava.jpg
+        NormalMap : Repeat JavaKhan/Texture/Lava/Lava_Blue_Norm.png
+     }
+    AdditionalRenderState {
+    }
+}

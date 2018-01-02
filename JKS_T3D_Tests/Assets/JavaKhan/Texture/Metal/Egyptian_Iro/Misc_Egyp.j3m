@@ -1,0 +1,10 @@
+Material My Material : Common/MatDefs/Light/Lighting.j3md {
+     MaterialParameters {
+        DiffuseMap : Flip Repeat JavaKhan/Texture/Metal/Egyptian_Iro/Misc_EgyptianHieroglyphMetal_2k_e.jpg
+        NormalMap : Flip Repeat JavaKhan/Texture/Metal/Egyptian_Iro/NormalMap.png
+        SpecularMap : Flip Repeat JavaKhan/Texture/Metal/Egyptian_Iro/Misc_EgyptianHieroglyphMetal_2k_s.jpg
+        GlowMap : Flip Repeat JavaKhan/Texture/Metal/Egyptian_Iro/OP_Glow_2.jpg
+     }
+    AdditionalRenderState {
+    }
+}

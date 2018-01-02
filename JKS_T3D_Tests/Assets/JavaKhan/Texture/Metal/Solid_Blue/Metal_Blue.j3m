@@ -1,0 +1,9 @@
+Material My Material : Common/MatDefs/Light/Lighting.j3md {
+     MaterialParameters {
+        DiffuseMap : Flip Repeat JavaKhan/Texture/Metal/Solid_Blue/Metal_SolidAnodizedAluminium_2k_s.jpg
+        NormalMap : Flip Repeat JavaKhan/Texture/Metal/Solid_Blue/Metal_SolidAnodizedAluminium_2k_n.jpg
+        SpecularMap : Flip Repeat JavaKhan/Texture/Metal/Solid_Blue/Metal_SolidAnodizedAluminium_2k_s.jpg
+     }
+    AdditionalRenderState {
+    }
+}

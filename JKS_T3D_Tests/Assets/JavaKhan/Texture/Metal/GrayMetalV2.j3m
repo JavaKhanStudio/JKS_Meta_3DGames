@@ -1,0 +1,9 @@
+Material My Material : Common/MatDefs/Light/Lighting.j3md {
+     MaterialParameters {
+        DiffuseMap : Repeat JavaKhan/Texture/Metal/GrayMetalV2.jpg
+        NormalMap : JavaKhan/Texture/Metal/GrayMetalV2_Norm.png
+        SpecularMap : JavaKhan/Texture/Metal/GrayMetalV2_Spec.png
+     }
+    AdditionalRenderState {
+    }
+}

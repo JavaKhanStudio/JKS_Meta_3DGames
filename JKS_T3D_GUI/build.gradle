@@ -15,6 +15,9 @@ sourceSets
     }
 }
 
+ jar {
+     from sourceSets.main.allSource
+ }
 
 eclipse.project {
     name = appName + "GUI"

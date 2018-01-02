@@ -1,0 +1,9 @@
+Material My Material : Common/MatDefs/Light/Lighting.j3md {
+     MaterialParameters {
+        DiffuseMap : Repeat JavaKhan/Texture/Rock/Rock_Vege/Rock_Vege.png
+        NormalMap : Repeat JavaKhan/Texture/Rock/Rock_Vege/Rock_Vege_Norm.png
+        SpecularMap : Repeat JavaKhan/Texture/Rock/Rock_Vege/Rock_Vege_Spec.png
+     }
+    AdditionalRenderState {
+    }
+}

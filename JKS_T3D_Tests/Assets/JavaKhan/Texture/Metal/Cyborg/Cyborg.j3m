@@ -1,0 +1,11 @@
+Material My Material : Common/MatDefs/Light/Lighting.j3md {
+     MaterialParameters {
+        DiffuseMap : Flip Repeat JavaKhan/Texture/Metal/Cyborg/misc_CyborgSphereVar2_2k_e.jpg
+        NormalMap : Flip Repeat JavaKhan/Texture/Metal/Cyborg/misc_CyborgSphereVar2_2k_n.jpg
+        SpecularMap : Flip Repeat JavaKhan/Texture/Metal/Cyborg/misc_CyborgSphereVar2_2k_s.jpg
+        ParallaxMap : Flip Repeat JavaKhan/Texture/Metal/Cyborg/misc_CyborgSphereVar2_2k_h.jpg
+        GlowMap : Flip Repeat JavaKhan/Texture/Metal/Cyborg/misc_CyborgSphereVar2_2k_e.jpg
+     }
+    AdditionalRenderState {
+    }
+}
