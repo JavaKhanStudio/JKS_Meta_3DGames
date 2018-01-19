@@ -25,9 +25,7 @@ public class Settings_Camera
 	public static float hauteur = 45 ; 
 	public static ChaseCamera chaseCam ;
 	
-	public static boolean normalState ;
-	public static boolean fromTopState ;
-	public static boolean fromSideState ;
+	public static Enum_CamType currentCamType ; 
 	
 	public Settings_Camera(SimpleApplication App)
 	{
@@ -44,20 +42,13 @@ public class Settings_Camera
 	}
 	
 
-	
-
 	public static void initCam()
-	
 	{
-		
 		cam = GVars_Soul_Model.app.getCamera() ;
 		cam.setLocation(new Vector3f(0f, cameraDistance,5f));
 		cam.lookAt(new Vector3f(0,0,0), new Vector3f(5,5,5));
 		cam.setFrustumFar(5000) ;
-		
 	}
-	
-	
 	
 	public static void nextModel()
 	{
@@ -85,22 +76,4 @@ public class Settings_Camera
         sun.setDirection(GVars_Soul_Model.app.getCamera().getDirection());
         GVars_Soul_Model.app.getRootNode().addLight(sun);
 	}
-	}
-
-/*
-public static void nextModel()
-{
-	System.out.println("Testing");
-	count ++ ; 
-	if(count == cameraList.size())
-	{count = 0 ;}
-	cam.setAxes(cameraList.get(count));
-	cam.setAxes(new Quaternion(
-			cameraList.get(count).getX(),
-			cam.getRotation().getY(),
-			cameraList.get(count).getZ(),
-			cam.getRotation().getW()));
-	cam.setLocation(cam.getLocation().add(deplacement.get(count)));
-
 }
-*/

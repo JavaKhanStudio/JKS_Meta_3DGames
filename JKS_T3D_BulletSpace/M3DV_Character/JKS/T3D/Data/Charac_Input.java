@@ -7,9 +7,4 @@ public class Charac_Input
 		forward = false, backward = false, 
         leftRotate = false, rightRotate = false, 
         beenMoving = false, beenMoving_Side = false, beenMoving_Front = false  ; 
-	
-	
-	
-	
-	//test
 }

@@ -18,10 +18,8 @@ import com.jme3.shadow.DirectionalLightShadowFilter;
 import com.jme3.shadow.DirectionalLightShadowRenderer;
 import com.jme3.shadow.EdgeFilteringMode;
 
-import JKS.T3D.GVE.Apply.Filter.GVE_Utils_Filter_Fog;
-import JKS.T3D.GVE.Apply.Filter.GVE_Utils_Filter_Water;
-import JKS.T3D.GVE.Apply.Light.GVE_Utils_Light_Ambiant;
-import JKS.T3D.GVE.Apply.Light.GVE_Utils_Light_Directional;
+import JKS.T3D.GVE.Apply.Filter.GVE_Utils_Filter;
+import JKS.T3D.GVE.Apply.Light.GVE_Utils_Light;
 import JKS.T3D.GVE.Filter.Outline.OutlineFilter;
 import JKS.T3D.Head.GVars.GVars_Soul_Model;
 import JKS.T3D.Map.GE.GE_Filter;
@@ -29,6 +27,7 @@ import JKS.T3D.Map.GE.GE_Light;
 import JKS.T3D.Map.GE.GE_Model;
 import JKS.T3D.Map.GE.Filter.GE_Fog;
 import JKS.T3D.Map.GE.Filter.GE_LakeWater;
+import JKS.T3D.Map.GE.Filter.GE_Shadow;
 import JKS.T3D.Map.GE.Light.GE_Light_Ambient;
 import JKS.T3D.Map.GE.Light.GE_Light_Directional;
 
@@ -60,13 +59,16 @@ public class Utils_GVE
 	
 	public static void ApplyFilter(GE_Filter applyIm)
 	{
-	
 		switch(applyIm.getName())
 		{
 			case GE_LakeWater.name :
-				{GE_Filter_list.put(applyIm.getName(),GVE_Utils_Filter_Water.makeWater(applyInto,((GE_LakeWater)applyIm))); break ;}
+				{GE_Filter_list.put(applyIm.getName(),GVE_Utils_Filter.makeWater(applyInto,((GE_LakeWater)applyIm))); break ;}
 			case GE_Fog.name :
-				{GE_Filter_list.put(applyIm.getName(),GVE_Utils_Filter_Fog.makeFog(applyInto,(GE_Fog)applyIm)); break ; }
+				{GE_Filter_list.put(applyIm.getName(),GVE_Utils_Filter.makeFog(applyInto,(GE_Fog)applyIm)); break ; }
+			case GE_Shadow.name :
+				{
+					GE_Filter_list.put(applyIm.getName(),GVE_Utils_Filter.makeShadow(applyInto,(GE_Shadow)applyIm)); break ;
+				}
 			default :
 				{System.out.println("GE_UTILS : Impossible de trouver le GE filter : " +  applyIm.getName());}
 		}
@@ -158,9 +160,9 @@ public class Utils_GVE
 		switch(applyIm.getName())
 		{
 			case GE_Light_Ambient.name : 
-				{GE_Light_list.put(applyIm.getName(),GVE_Utils_Light_Ambiant.makeAmbiantLight(applyInto,(GE_Light_Ambient) applyIm)); break ; }
+				{GE_Light_list.put(applyIm.getName(),GVE_Utils_Light.makeAmbiantLight(applyInto,(GE_Light_Ambient) applyIm)); break ; }
 			case GE_Light_Directional.name : 
-				{GE_Light_list.put(applyIm.getName(),GVE_Utils_Light_Directional.makeDirectionalLight(applyInto,(GE_Light_Directional) applyIm)); break ; }
+				{GE_Light_list.put(applyIm.getName(),GVE_Utils_Light.makeDirectionalLight(applyInto,(GE_Light_Directional) applyIm)); break ; }
 			default :
 				{System.out.println("GE_UTILS : Impossible de trouver la GE light : " +  applyIm.getName());}
 		}

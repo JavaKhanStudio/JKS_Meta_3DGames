@@ -17,6 +17,9 @@ public class TA_Trampoline
 		space.getPhysicsSpace().add(Model);
 		Model.getControl(RigidBodyControl.class).getCollisionShape().setScale(Model.getWorldScale());
 		control.setLinearVelocity(new Vector3f(0,force,0)) ;
+		control.setFriction(0);
+		control.setRestitution(force);
+//		control.setres
 	}
 	
 	

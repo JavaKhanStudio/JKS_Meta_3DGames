@@ -46,8 +46,8 @@ dependencies
     compile project(':JKS_T3D_GUI')
     compile project(':JKS_T3D_ToolsFromJME')
     
-    compile 'com.objectdb:objectdb:+'
-    compile 'org.eclipse.persistence:javax.persistence:+'
+    compile "com.objectdb:objectdb:$dbVersion"
+  	compile 'org.eclipse.persistence:javax.persistence:2.2.0'
     compile 'org.lwjgl.lwjgl:lwjgl:2.9.3'
 
 }

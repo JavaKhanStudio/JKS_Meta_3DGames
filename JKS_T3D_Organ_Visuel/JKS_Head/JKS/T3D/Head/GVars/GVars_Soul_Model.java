@@ -27,10 +27,8 @@ public abstract class GVars_Soul_Model
 		app = App ; 
 		screen = new Screen(app) ; 
 		app.getGuiNode().addControl(screen);
-
 	}
-	
-	
+		
 	protected abstract void personalInit() ;
 	
 	public static AssetManager getAssetManager()
@@ -48,6 +46,5 @@ public abstract class GVars_Soul_Model
 	
 	public static Camera getCam()
 	{return app.getCamera();}
-	
 	
 }

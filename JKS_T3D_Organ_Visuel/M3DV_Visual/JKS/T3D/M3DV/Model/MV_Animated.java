@@ -23,8 +23,7 @@ public interface MV_Animated extends AnimEventListener, BasicImpl
 	public default AnimChannel getWeaponChannel()
 	{return getControl().weaponChannel ; }
 	
-	public boolean animationFinish = true ; 
-	
+
 	// FOR TEST ONLY
 	public default void setTheAnimation(String action,float speed,boolean loop)
 	{buildAnimationOn(getChannel(),action, speed,loop) ;}
@@ -46,7 +45,6 @@ public interface MV_Animated extends AnimEventListener, BasicImpl
 		if(getChannel().getAnimationName() == null || !getChannel().getAnimationName().equals(getControl().getAsset().actionPath.getAnim(action.toString())))
 		{
 			setTheAnimation(action,true);
-			//System.out.println(channel.getAnimationName() + " channel " + action.toString() + " action");
 		}
  	}
 	
@@ -56,7 +54,6 @@ public interface MV_Animated extends AnimEventListener, BasicImpl
 		
 		if(getWeaponChannel() != null)
 		{buildAnimationOn(getWeaponChannel(),action.animName, action.getSpeed(getControl().getAsset()),loop) ;}
-	
 	}
 
 	
@@ -102,6 +99,4 @@ public interface MV_Animated extends AnimEventListener, BasicImpl
 	
 	}
 	
-	
-		
 }	

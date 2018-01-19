@@ -25,8 +25,8 @@ repositories {
 }
 
 dependencies {
-  compile 'com.objectdb:objectdb:+'
-  compile 'org.eclipse.persistence:javax.persistence:+'
+  compile "com.objectdb:objectdb:$dbVersion"
+  compile 'org.eclipse.persistence:javax.persistence:2.2.0'
 }
 
 task buildAll {

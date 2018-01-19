@@ -9,6 +9,7 @@ import com.jme3.math.Vector3f;
 import com.jme3.scene.Node;
 import com.jme3.scene.Spatial;
 
+import JKS.T3D.Enums.Enum_Animation;
 import JKS.T3D.Head.GVars.GVars_Soul_Model;
 import JKS.T3D.M3DV.Asset.Indexed_AssetModel;
 import JKS.T3D.M3DV.Asset.Indexed_Asset_Animated;
@@ -23,11 +24,12 @@ public class MV_Animated_GMOD extends ModelVisuel implements MV_Animated
 	
 	public AnimationControl controlCenter  ; 
 	
-	public MV_Animated_GMOD( Indexed_AssetModel Asset) 
+	public MV_Animated_GMOD(Indexed_AssetModel Asset) 
 	{
 		super(Asset) ; 
 
 		controlCenter = new AnimationControl(this,this) ;
+		this.setAnimationIfNotAlready(Enum_Animation.WAIT, true);
 	}
 	
 	
@@ -54,8 +56,6 @@ public class MV_Animated_GMOD extends ModelVisuel implements MV_Animated
 			 }
 		});
 	}
-	
-	
 	
 	public void addAnimatedTexture_OnBody(Material mat)
 	{Utils_AnimMaterial.applyAnimatedTexture(Utils_3DObject.getNode((Node) this.getChild(0), this.getAsset().getDirectBody()),mat,"MaterielTexture") ;}

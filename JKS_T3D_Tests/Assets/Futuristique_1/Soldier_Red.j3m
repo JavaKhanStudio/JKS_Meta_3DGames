@@ -1,0 +1,10 @@
+Material My Material : Common/MatDefs/Light/Lighting.j3md {
+     MaterialParameters {
+        DiffuseMap : Flip Futuristique_1/soldier_d_Red_Blue.jpg
+        NormalMap : Flip Futuristique_1/soldier_n.tga
+        SpecularMap : Flip Futuristique_1/soldier_s.tga
+        GlowMap : Flip Futuristique_1/Soldier_Glow.png
+     }
+    AdditionalRenderState {
+    }
+}

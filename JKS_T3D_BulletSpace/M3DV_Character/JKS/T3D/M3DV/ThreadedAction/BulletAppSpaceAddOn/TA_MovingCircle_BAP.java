@@ -49,7 +49,6 @@ public class TA_MovingCircle_BAP extends AbstractControl
 		//control.setPhysicsLocation(control.getPhysicsLocation().add(new Vector3f(rayon*(float)Math.cos(buffer),rayon*(float)Math.sin(buffer),0)));
 		//control.setGravity(new Vector3f(0,40,0)) ;
 		//control.activate();
-		
 	}
 	
 	public float getSpeed() 

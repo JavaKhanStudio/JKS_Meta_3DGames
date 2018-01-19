@@ -51,8 +51,7 @@ public abstract class ModelVisuel extends Node implements BasicImpl
 	public Vector2Int modelPos ; 
 		
 	public ModelVisuel(String path)
-	{
-		
+	{	
 		main = Utils_3DObject.loadDirect(path) ;
 		this.attachChild(main) ; 
 	}

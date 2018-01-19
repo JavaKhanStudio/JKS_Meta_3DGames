@@ -17,8 +17,11 @@ public enum Enum_CamType
 	}
 	
 	
-	public void applyMe(String info)
+	public void applyCamera(String info)
 	{
+		if(GVars_Soul_Model.currentCam != null && GVars_Soul_Model.currentCam == this && GVars_Soul_Model.currentCam != THIRD_PERSON_SIDE)
+			return ;  
+		
 		GVars_Soul_Model.currentCam = this ; 
 		
 		try
@@ -41,7 +44,6 @@ public enum Enum_CamType
 		{
 			System.out.println("PROBLEM AVEC CAMERA " + this.type + " AND INFO " + info) ;
 		}
-		
 	}
 	
 	

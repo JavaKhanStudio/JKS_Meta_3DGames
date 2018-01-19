@@ -28,7 +28,6 @@ repositories {
     jcenter()
 }
 
-ext.jmeVersion = '[3.1,)'
 dependencies {
 
 	compile "org.jmonkeyengine:jme3-core:$jmeVersion"

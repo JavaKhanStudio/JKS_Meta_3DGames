@@ -10,15 +10,17 @@ import com.jme3.scene.Node;
 import com.jme3.system.AppSettings;
 
 import JKS.T3D.GVE.Apply.Utils_GVE;
-import JKS.T3D.GVE.Filtre.Utils_OutilineFilter;
+import JKS.T3D.GVE.Apply.Filter.GVE_Utils_OutilineFilter;
 import JKS.T3D.Head.GVars.GVars_Soul_Model;
 import JKS.T3D.Map.GE.Filter.GE_LakeWater;
+import JKS.T3D.Map.GE.Filter.GE_Shadow;
 import JKS.T3D.Utils.Model3D.Utils_3DObject;
 
 public class Test_GVE extends SimpleApplication
 {
 
 	protected static FlyByCamera flyCam;
+	DirectionalLight sun ;
 	
 	  public static void main(String[] args) 
 	  {
@@ -48,8 +50,8 @@ public class Test_GVE extends SimpleApplication
 		
 		Node currentStage = (Node) Utils_3DObject.safeGetSpatial("JKS/testAsset/map/GMOD_Stage_1_V2.j3o") ; 
 		currentStage.scale(5) ; 
-		
 		Utils_3DObject.safeAdd(currentStage);
+		
 		this.initLight();
 		
 		Utils_GVE.initFilters(this);
@@ -57,8 +59,11 @@ public class Test_GVE extends SimpleApplication
 	    GE_LakeWater lakeWater = new GE_LakeWater(320) ; 
 	    Utils_GVE.ApplyFilter(lakeWater);
 	    
-		Utils_OutilineFilter.initFilter();
-		Utils_OutilineFilter.showOutlineEffect(currentStage, 1, ColorRGBA.White);
+	    GE_Shadow shadow = new GE_Shadow(sun) ; 
+	    Utils_GVE.ApplyFilter(shadow);
+	    
+		GVE_Utils_OutilineFilter.initFilter();
+		GVE_Utils_OutilineFilter.showOutlineEffect(currentStage, 1, ColorRGBA.White);
 	}
 	
 	
@@ -68,7 +73,7 @@ public class Test_GVE extends SimpleApplication
 		ambientLight.setColor(new ColorRGBA(1, 1, 1, 0.5f));
 		this.getRootNode().addLight(ambientLight);
 		
-		DirectionalLight sun = new DirectionalLight();
+		sun = new DirectionalLight();
 		sun.setColor(new ColorRGBA(1, 1, 1, 0.5f));
 		this.getRootNode().addLight(sun);	
 	}

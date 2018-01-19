@@ -54,7 +54,6 @@ public class TA_Tourniquet_BAP extends Node {
 		Geometry boxGeometry = new Geometry("Box", box);
         boxGeometry.setMaterial(material);
         return boxGeometry ;
-       
 	}
 	
 }

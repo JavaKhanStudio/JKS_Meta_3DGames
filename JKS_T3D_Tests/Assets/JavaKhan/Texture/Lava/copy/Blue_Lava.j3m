@@ -1,9 +1,0 @@
-Material My Material : Common/MatDefs/Light/Lighting.j3md {
-     MaterialParameters {
-        DiffuseMap : Flip Repeat JavaKhan/Texture/Lava/Blue_Lava.jpg
-        NormalMap : Flip Repeat JavaKhan/Texture/Lava/Lava_Blue_Norm.png
-        GlowMap : JavaKhan/Texture/Lava/Blue_Lava_Glow.png
-     }
-    AdditionalRenderState {
-    }
-}

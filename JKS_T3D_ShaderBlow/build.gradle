@@ -19,6 +19,9 @@ eclipse.project {
     name = appName + "ShaderBlow"
 }
 
+jar {
+     from sourceSets.main.allSource
+}
 
 repositories {
 	jcenter()

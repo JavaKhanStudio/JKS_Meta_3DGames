@@ -25,7 +25,6 @@ public enum Enum_Material_Animated implements Material_Path
 	quadrierVert(FVars_MP.AMP_Genral + "@Quadrier_Green.j3m"),
 	quadrierRed(FVars_MP.AMP_Genral + "@Quadrier_Red.j3m"),
 	
-	
 	//MARK
 	INTEROGATION(FVars_MP.AMP_Monster + "@CrystalSpace_Blue_2.j3m"),
 	

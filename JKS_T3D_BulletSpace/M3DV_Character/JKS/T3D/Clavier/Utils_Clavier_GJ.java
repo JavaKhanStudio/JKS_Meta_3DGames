@@ -93,11 +93,14 @@ public class Utils_Clavier_GJ
 		getInputManager().addMapping("Walk Backward",new KeyTrigger(backward));
 		getInputManager().addMapping("Jump", new KeyTrigger(jump));
 		
-		if (first){
+		if (first)
+		{
 			getInputManager().addMapping("Strafe Left", new KeyTrigger(left));
 			getInputManager().addMapping("Strafe Right",new KeyTrigger(right));
 			getInputManager().addListener(GVars_Soul_Model.actionLisen, "Strafe Left", "Strafe Right");
-		}else{
+		}
+		else
+		{
 			getInputManager().addMapping("Rotate Left",new KeyTrigger(left));
 			getInputManager().addMapping("Rotate Right",new KeyTrigger(right));
 			getInputManager().addListener(GVars_Soul_Model.actionLisen, "Rotate Left", "Rotate Right");
@@ -109,6 +112,5 @@ public class Utils_Clavier_GJ
   
     private static InputManager getInputManager() 
     {return GVars_Soul_Model.app.getInputManager() ; }
-	
-	
+
 }

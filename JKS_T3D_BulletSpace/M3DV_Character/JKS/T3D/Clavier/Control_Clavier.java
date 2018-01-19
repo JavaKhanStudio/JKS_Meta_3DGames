@@ -55,10 +55,12 @@ public class Control_Clavier implements ActionListener
         } 
         else if (binding.equals("Jump")) 
         {
-        	Charac_Main.physicsCharacter.jump();
+        	if(Charac_Main.visualCharacter.getCurrentAnimation().equalsIgnoreCase(Enum_Animation.JUMPING_STAY.animName))
+        		return ; 
         	
+        	Charac_Main.physicsCharacter.jump();
         	Charac_Main.visualCharacter.setTheAnimation(Enum_Animation.JUMPING_STAY, false);
-        	Charac_Main.visualCharacter.controlCenter.animationFinish = false ; 
+        	
         }
         else if(binding.equals("Test1")) {
 //        	inputManager.clearMappings();

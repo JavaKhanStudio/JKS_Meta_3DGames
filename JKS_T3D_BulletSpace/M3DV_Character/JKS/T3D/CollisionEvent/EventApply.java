@@ -14,11 +14,18 @@ public class EventApply
 	{
 		switch(eventValue) 
 		{
-			
+			case Enum_EventTypes.GRAVITY :
+			{
+				Charac_Main.physicsCharacter.inverseGravity(Boolean.parseBoolean(target.getUserData(Enum_EventTypes.GRAVITY)));
+				
+				if(GVars_Soul_Model.currentCam != null)
+					GVars_Soul_Model.currentCam.applyCamera(null) ; 
+				
+				break ; 
+			}
 			case Enum_EventTypes.CAMCHANGE :
 			{
-				
-				Enum_CamType.getType(target.getUserData(eventValue)).applyMe(target.getUserData("Cam_Info")); ;
+				Enum_CamType.getType(target.getUserData(eventValue)).applyCamera(target.getUserData("Cam_Info")); ;
 				break ; 
 			}
 			case Enum_EventTypes.TOUCHE_BAD :
@@ -45,7 +52,6 @@ public class EventApply
 				}
 				
 				GVars_Soul_Model.app.stop();
-				//Charac_Main.app.getRootNode().detachAllChildren();
 			}
 			
 			default : 
